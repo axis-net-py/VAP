@@ -98,7 +98,9 @@
   .center{text-align:center}
   .lead{color:var(--muted);font-weight:300;max-width:680px;font-size:1.02rem}
   .center .lead{margin:0 auto}
-  mark{background:linear-gradient(100deg,#f8e08a,#f0c04a);color:#1a1305;padding:0 .28em;border-radius:3px;font-weight:600}
+  mark{background:linear-gradient(100deg,#f8e08a,#f0c04a);color:#1a1305;padding:0 .28em;border-radius:3px;font-weight:600;white-space:nowrap}
+  .nb{white-space:nowrap}
+  h1,h2,.lead,.hero .sub,.quote blockquote{text-wrap:balance}
 
   .divider{height:1px;background:linear-gradient(90deg,transparent,var(--line-strong),transparent)}
 
@@ -223,7 +225,12 @@
 
     /* hero */
     .hero{padding:110px 20px 56px}
-    .badge{font-size:.66rem;letter-spacing:.14em;padding:8px 16px;max-width:92vw;text-align:center;line-height:1.5;margin-bottom:26px}
+    .badge{font-size:.66rem;letter-spacing:.14em;padding:10px 20px;max-width:92vw;text-align:center;line-height:1.7;margin-bottom:26px;
+      flex-direction:column;gap:2px}
+    .badge .sep{display:none}
+    .badge .dot{position:absolute;left:-9999px}
+    .meta .sep{display:none}
+    .meta > span{display:flex;flex-direction:column;gap:1px;line-height:1.5}
     .hero h1{font-size:clamp(2.5rem,13vw,3.4rem)}
     .hero .slogan{margin-top:16px}
     .hero .sub{margin-top:16px}
@@ -291,7 +298,7 @@
 </nav>
 
 <header class="hero" id="home">
-  <div class="badge"><span class="dot"></span> 31 de Julho de 2026 · San Alberto — Paraguay</div>
+  <div class="badge"><span class="dot"></span> <span class="nb">31 de Julho de 2026</span><span class="sep"> · </span><span class="nb">San Alberto — Paraguay</span></div>
   <h1>Vendas de Alta <span class="gold">Performance!</span></h1>
   <p class="slogan">O Código das Vendas Infalíveis</p>
   <p class="sub">Uma noite para dominar <strong>mentalidade de vendas</strong>, o <strong>perfil comportamental DISC</strong> e as estratégias que transformam atendimento em <strong>faturamento</strong>.</p>
@@ -299,7 +306,7 @@
   <div class="meta-row">
     <div class="meta">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-      <span><b>31 de Julho</b> de 2026</span>
+      <span><span class="nb"><b>31 de Julho</b> de 2026</span></span>
     </div>
     <div class="meta">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
@@ -307,7 +314,7 @@
     </div>
     <div class="meta">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-      <span><b>Restaurante Costelão</b> · San Alberto — PY</span>
+      <span><b class="nb">Restaurante Costelão</b><span class="sep"> · </span><span class="nb">San Alberto — PY</span></span>
     </div>
   </div>
 
@@ -511,13 +518,13 @@
 <section class="quote">
   <div class="wrap rv">
     <span class="qmark">“</span>
-    <blockquote>Se você quer ir <em>rápido</em>, vá sozinho.<br>Se quer ir <em>longe</em>, vá bem acompanhado.</blockquote>
+    <blockquote>Se você quer ir <em>rápido</em>, <span class="nb">vá sozinho.</span><br>Se quer ir <em>longe</em>, <span class="nb">vá bem acompanhado.</span></blockquote>
   </div>
 </section>
 
 <section class="final" style="padding-top:0">
   <div class="wrap rv">
-    <p class="kicker">31 de Julho · Restaurante Costelão · San Alberto — PY</p>
+    <p class="kicker"><span class="nb">31 de Julho</span> · <span class="nb">Restaurante Costelão</span> · <span class="nb">San Alberto — PY</span></p>
     <h2>As vagas são limitadas</h2>
     <p class="lead">Uma noite pode mudar a forma como você e seu time vendem para sempre. Reserve agora.</p>
     <a class="cta" href="https://form.jotform.com/261595450520051" target="_blank" rel="noopener">Garantir minha vaga</a>
