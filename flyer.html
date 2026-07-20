@@ -54,18 +54,24 @@
   .meta .row b{color:var(--white);font-weight:600}
   .meta svg{width:26px;height:26px;stroke:var(--gold);flex-shrink:0}
 
-  .prices{display:flex;gap:20px;margin-top:34px}
-  .price{border:1.5px solid var(--line);border-radius:20px;padding:22px 40px;background:rgba(255,255,255,.02);min-width:300px}
+  .prices{display:flex;gap:16px;margin-top:26px}
+  .price{border:1.5px solid var(--line);border-radius:20px;padding:20px 30px;background:rgba(255,255,255,.02);min-width:0}
   .price.hot{border-color:rgba(240,192,74,.6);background:linear-gradient(180deg,rgba(240,192,74,.10),rgba(240,192,74,.02))}
-  .price .t{font-size:20px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:8px}
+  .price .t{white-space:nowrap;font-size:17px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold-dark);margin-bottom:8px}
   .price.hot .t{color:var(--gold)}
-  .price .v{font-family:'Anton',sans-serif;font-size:48px;
+  .price .v{font-family:'Anton',sans-serif;font-size:38px;
     background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
   .price .d{font-size:19px;color:var(--muted);font-weight:300;margin-top:6px}
-  .coffee{margin-top:16px;font-size:21px;color:var(--muted);font-weight:300}
+  .coffee{margin-top:12px;font-size:21px;color:var(--muted);font-weight:300}
   .coffee b{color:var(--gold-light);font-weight:600}
+  .apoio{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:14px}
+  .apoio img{height:56px;width:56px;object-fit:contain;border-radius:10px;background:#fff;padding:5px}
+  .apoio .tx{text-align:left}
+  .apoio .k{font-size:16px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-dark)}
+  .apoio .n{font-size:20px;font-weight:600;color:var(--white)}
+  .apoio .ig{font-size:17px;color:var(--gold-light)}
 
-  .cta-wrap{margin-top:34px;display:flex;flex-direction:column;align-items:center;gap:18px}
+  .cta-wrap{margin-top:22px;display:flex;flex-direction:column;align-items:center;gap:14px}
   .cta-label{font-size:22px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted)}
   .cta{display:inline-block;padding:22px 68px;border-radius:999px;background:var(--gold-grad);
     color:#1a1305;font-weight:700;font-size:30px;text-transform:uppercase;letter-spacing:.06em;
@@ -103,13 +109,27 @@
       <div class="v">G$ 300.000</div>
       <div class="d">por pessoa</div>
     </div>
+    <div class="price">
+      <div class="t">Associados ACISA</div>
+      <div class="v">G$ 260.000</div>
+      <div class="d">por pessoa</div>
+    </div>
     <div class="price hot">
       <div class="t">Equipe · 5 ou mais</div>
       <div class="v">G$ 260.000</div>
-      <div class="d">por pessoa — leve seu time</div>
+      <div class="d">leve seu time</div>
     </div>
   </div>
   <p class="coffee"><b>✦ Coffee break incluso</b> · vagas limitadas</p>
+
+  <div class="apoio">
+    <img src="acisa.png" onerror="this.style.display='none'">
+    <div class="tx">
+      <div class="k">Apoio institucional</div>
+      <div class="n">ACISA — Asoc. Comercial e Industrial de San Alberto</div>
+      <div class="ig">@acisa.py</div>
+    </div>
+  </div>
 
   <div class="cta-wrap">
     <p class="cta-label">Programa completo e inscrições</p>

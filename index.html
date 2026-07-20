@@ -181,9 +181,21 @@
   .detail .v{font-weight:600;font-size:1.08rem;line-height:1.4}
 
   /* ---------- INVESTIMENTO ---------- */
-  .prices{display:grid;gap:26px;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));margin-top:56px;align-items:stretch}
-  .price{border-radius:22px;padding:44px 36px;background:var(--bg-card);border:1px solid var(--line);
+  .prices{display:grid;gap:22px;grid-template-columns:repeat(3,1fr);margin-top:56px;align-items:stretch}
+  @media(max-width:900px){.prices{grid-template-columns:1fr;max-width:440px;margin-left:auto;margin-right:auto}}
+  .price{border-radius:22px;padding:40px 30px;background:var(--bg-card);border:1px solid var(--line);
     display:flex;flex-direction:column;position:relative;text-align:left}
+
+  /* apoio */
+  .apoio{display:flex;align-items:center;justify-content:center;gap:22px;flex-wrap:wrap;
+    margin-top:64px;padding:26px 34px;border:1px solid var(--line);border-radius:18px;background:var(--bg-card)}
+  .apoio img{height:64px;width:64px;object-fit:contain;border-radius:12px;background:#fff;padding:6px}
+  .apoio .tx{text-align:left}
+  .apoio .tx .k{font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-dark)}
+  .apoio .tx .n{font-weight:600;font-size:1.02rem}
+  .apoio .tx a{color:var(--gold);text-decoration:none;font-size:.88rem}
+  .apoio .tx a:hover{text-decoration:underline}
+  @media(max-width:640px){.apoio{flex-direction:column;text-align:center}.apoio .tx{text-align:center}}
   .price.hot{border:1px solid var(--line-strong);background:
     linear-gradient(180deg,rgba(240,192,74,.08),rgba(240,192,74,.02)),var(--bg-card);
     box-shadow:0 20px 70px rgba(240,192,74,.12)}
@@ -199,7 +211,7 @@
   .price li{padding-left:30px;position:relative;margin-bottom:12px;font-size:.93rem;color:var(--muted);font-weight:300}
   .price li::before{content:"✦";position:absolute;left:2px;color:var(--gold)}
   .price li b{color:var(--white);font-weight:600}
-  .price .cta{margin-top:auto;text-align:center}
+  .price .cta{margin-top:auto;text-align:center;padding:15px 18px;font-size:.82rem;letter-spacing:.05em;white-space:nowrap}
 
   /* ---------- QUOTE ---------- */
   .quote{text-align:center}
@@ -496,6 +508,18 @@
         </ul>
         <a class="cta ghost" href="https://form.jotform.com/261595450520051" target="_blank" rel="noopener">Quero meu ingresso</a>
       </div>
+      <div class="price rv">
+        <div class="name">Associados ACISA</div>
+        <div class="desc">Condição especial para associados da ACISA — apoiadora do treinamento.</div>
+        <div class="amount">G$ 260.000</div>
+        <div class="per">por pessoa · associado ACISA</div>
+        <ul>
+          <li>Tudo do ingresso individual</li>
+          <li><b>Economia de G$ 40.000</b></li>
+          <li>Benefício exclusivo do associado</li>
+        </ul>
+        <a class="cta ghost" href="https://form.jotform.com/261595450520051" target="_blank" rel="noopener">Sou associado ACISA</a>
+      </div>
       <div class="price hot rv">
         <div class="flag">Leve seu time</div>
         <div class="name">Equipe · 5 ou mais</div>
@@ -508,6 +532,15 @@
           <li>Time alinhado na mesma mentalidade de vendas</li>
         </ul>
         <a class="cta" href="https://form.jotform.com/261595450520051" target="_blank" rel="noopener">Inscrever minha equipe</a>
+      </div>
+    </div>
+
+    <div class="apoio rv">
+      <img src="acisa.png" alt="ACISA" onerror="this.style.display='none'">
+      <div class="tx">
+        <div class="k">Apoio institucional</div>
+        <div class="n">ACISA — Asociación Comercial e Industrial de San Alberto</div>
+        <a href="https://www.instagram.com/acisa.py" target="_blank" rel="noopener">@acisa.py</a>
       </div>
     </div>
   </div>
