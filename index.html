@@ -126,6 +126,27 @@
     background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
   .stat .k{font-size:.8rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase;margin-top:4px}
 
+  /* ---------- VÍDEO ---------- */
+  .video-wrap{position:relative;max-width:900px;margin:52px auto 0;border-radius:20px;overflow:hidden;
+    border:1px solid var(--line);background:#000;box-shadow:0 30px 80px rgba(0,0,0,.55)}
+  .video-wrap::after{content:"";position:absolute;inset:0;pointer-events:none;border-radius:20px;
+    box-shadow:inset 0 0 0 1px rgba(240,192,74,.10)}
+  .video-wrap video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;background:#000}
+  .video-play{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    border:0;cursor:pointer;background:rgba(6,5,4,.35);transition:background .25s}
+  .video-play:hover{background:rgba(6,5,4,.18)}
+  .video-play span{width:88px;height:88px;border-radius:50%;background:var(--gold-grad);
+    display:flex;align-items:center;justify-content:center;box-shadow:0 12px 44px rgba(240,192,74,.45);
+    transition:transform .25s}
+  .video-play:hover span{transform:scale(1.07)}
+  .video-play svg{width:30px;height:30px;fill:#1a1305;margin-left:5px}
+  .video-wrap.playing .video-play{opacity:0;pointer-events:none}
+  @media(max-width:640px){
+    .video-wrap{margin-top:34px;border-radius:16px}
+    .video-play span{width:66px;height:66px}
+    .video-play svg{width:23px;height:23px}
+  }
+
   /* ---------- CONTEÚDO ---------- */
   .grid{display:grid;gap:22px;grid-template-columns:repeat(2,1fr);margin-top:56px}
   @media(max-width:600px){.grid{grid-template-columns:1fr}}
@@ -300,6 +321,7 @@
     <a href="#home"><img src="logo-jr.png" alt="Jocelaine Rufatto"></a>
     <ul class="nav-links">
       <li><a href="#palestrante">Palestrante</a></li>
+      <li><a href="#video">Vídeo</a></li>
       <li><a href="#conteudo">Conteúdo</a></li>
       <li><a href="#programa">Programa</a></li>
       <li><a href="#evento">O Evento</a></li>
@@ -356,6 +378,23 @@
         <div class="stat"><div class="v">+1.000</div><div class="k">profissionais mentorados</div></div>
         <div class="stat"><div class="v">16</div><div class="k">edições de treinamentos</div></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="video">
+  <div class="wrap center">
+    <p class="kicker rv">Assista ao convite</p>
+    <h2 class="rv">Uma Noite que Muda o Jogo</h2>
+    <p class="lead rv">Veja como é a experiência de um treinamento com <mark>Jocelaine Rufatto</mark>.</p>
+    <div class="video-wrap rv" id="videoWrap">
+      <video id="promoVideo" poster="video-poster.jpg" preload="none" playsinline
+        src="video.mp4" aria-label="Convite — Vendas de Alta Performance"></video>
+      <button class="video-play" id="videoPlay" aria-label="Reproduzir vídeo">
+        <span><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+      </button>
     </div>
   </div>
 </section>
@@ -583,6 +622,15 @@
     cm.textContent = pad(m); cs.textContent = pad(s);
   }
   tick(); setInterval(tick, 1000);
+
+  // vídeo: botão de play custom
+  videoPlay.addEventListener('click', () => {
+    videoWrap.classList.add('playing');
+    promoVideo.controls = true;
+    promoVideo.play();
+  });
+  promoVideo.addEventListener('pause', () => videoWrap.classList.remove('playing'));
+  promoVideo.addEventListener('play', () => videoWrap.classList.add('playing'));
 
   // reveal on scroll
   const io = new IntersectionObserver(es => es.forEach(e => {
