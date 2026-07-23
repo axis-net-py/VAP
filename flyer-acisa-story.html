@@ -6,66 +6,66 @@
 <style>
   :root{
     --ink:#151210;
-    --ink-soft:#6b6259;
+    --ink-soft:#5f574e;
     --paper:#faf7f2;
     --paper-2:#f2ede4;
     --gold:#c08a2a;
     --gold-grad:linear-gradient(100deg,#d9a84a 0%,#c08a2a 60%,#a9741f 100%);
-    --line:rgba(21,18,16,.10);
+    --line:rgba(21,18,16,.12);
   }
   *{margin:0;padding:0;box-sizing:border-box}
   body{width:1080px;height:1920px;background:var(--paper);color:var(--ink);
     font-family:'Poppins',sans-serif;overflow:hidden;display:flex;flex-direction:column}
-  .goldbar{height:12px;background:var(--gold-grad);flex-shrink:0}
-  .inner{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:92px 80px 86px}
+  .goldbar{height:14px;background:var(--gold-grad);flex-shrink:0}
+  .inner{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:96px 60px 92px}
 
-  .eyebrow{font-size:19px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .eyebrow{font-size:26px;letter-spacing:.30em;text-transform:uppercase;color:var(--gold);font-weight:700}
 
-  /* PARCERIA — herói */
-  .partners{display:flex;align-items:center;justify-content:center;gap:60px;margin-top:44px}
-  .partners img.ac{height:172px}
-  .partners img.jr{height:88px;margin-top:-22px}
-  .partners .x{font-family:'Fraunces',serif;font-size:52px;color:var(--gold);opacity:.55;font-weight:600}
+  /* PARCERIA */
+  .partners{display:flex;align-items:center;justify-content:center;gap:56px;margin-top:34px}
+  .partners img.ac{height:150px}
+  .partners img.jr{height:80px;margin-top:-20px}
+  .partners .x{font-family:'Fraunces',serif;font-size:56px;color:var(--gold);opacity:.6;font-weight:600}
 
   h1{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;
-    font-size:76px;line-height:1.02;margin-top:52px;letter-spacing:.005em}
+    font-size:82px;line-height:1.0;margin-top:44px;letter-spacing:.005em}
   h1 .gold{background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .sub{font-size:25px;color:var(--ink-soft);font-weight:300;margin-top:20px;max-width:800px;line-height:1.55}
+  .sub{font-size:31px;color:var(--ink-soft);font-weight:400;margin-top:16px;max-width:900px;line-height:1.45}
   .sub b{color:var(--ink);font-weight:600}
 
-  .rule{width:280px;height:3px;background:var(--gold-grad);border-radius:2px;margin:48px 0 0}
+  .rule{width:300px;height:4px;background:var(--gold-grad);border-radius:2px;margin-top:40px}
 
   /* evento */
-  .event{margin-top:46px;width:100%;border-radius:22px;background:var(--paper-2);padding:28px 34px;
+  .event{margin-top:40px;width:100%;border-radius:22px;background:var(--paper-2);padding:22px 28px;
     display:flex;align-items:center;gap:28px;text-align:left}
-  .event .ph{width:152px;height:152px;border-radius:16px;overflow:hidden;flex-shrink:0;background:#fff}
+  .event .ph{width:150px;height:150px;border-radius:16px;overflow:hidden;flex-shrink:0;background:#fff}
   .event .ph img{width:100%;height:100%;object-fit:cover;object-position:50% 18%;display:block}
-  .event .tx .k{font-size:16px;letter-spacing:.24em;text-transform:uppercase;color:var(--gold);font-weight:600}
-  .event .tx .n{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:40px;line-height:1.05;margin:8px 0 4px}
-  .event .tx .sl{font-family:'Fraunces',serif;font-style:italic;font-size:24px;color:var(--gold)}
-  .event .tx .w{font-size:20px;color:var(--ink-soft);font-weight:300;margin-top:10px}
+  .event .tx .k{font-size:22px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .event .tx .n{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:46px;line-height:1.04;margin:6px 0 4px}
+  .event .tx .sl{font-family:'Fraunces',serif;font-style:italic;font-size:29px;color:var(--gold)}
+  .event .tx .w{font-size:26px;color:var(--ink-soft);font-weight:400;margin-top:12px;line-height:1.4}
   .event .tx .w b{color:var(--ink);font-weight:600}
 
   /* benefícios */
-  .ben-h{margin-top:52px;font-family:'Anton',sans-serif;text-transform:uppercase;font-size:34px;letter-spacing:.02em}
+  .ben-h{margin-top:48px;font-family:'Anton',sans-serif;text-transform:uppercase;font-size:42px;letter-spacing:.01em}
   .ben-h em{font-style:normal;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .bens{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px;width:100%}
-  .ben{display:flex;align-items:center;gap:16px;text-align:left;background:#fff;
-    border:1.5px solid var(--line);border-radius:16px;padding:26px 26px}
-  .ben .ic{width:44px;height:44px;border-radius:12px;flex-shrink:0;display:flex;align-items:center;justify-content:center;
-    background:rgba(192,138,42,.10)}
-  .ben .ic svg{width:22px;height:22px;stroke:var(--gold);fill:none;stroke-width:2}
-  .ben .t{font-size:19px;line-height:1.35;color:var(--ink-soft);font-weight:300}
-  .ben .t b{color:var(--ink);font-weight:600;display:block;font-size:20px}
+  .bens{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:28px;width:100%}
+  .ben{display:flex;align-items:center;gap:18px;text-align:left;background:#fff;
+    border:2px solid var(--line);border-radius:18px;padding:26px 24px}
+  .ben .ic{width:56px;height:56px;border-radius:14px;flex-shrink:0;display:flex;align-items:center;justify-content:center;
+    background:rgba(192,138,42,.12)}
+  .ben .ic svg{width:28px;height:28px;stroke:var(--gold);fill:none;stroke-width:2}
+  .ben .t{font-size:24px;line-height:1.3;color:var(--ink-soft);font-weight:400}
+  .ben .t b{color:var(--ink);font-weight:700;display:block;font-size:30px;line-height:1.2;margin-bottom:2px}
 
-  /* rodapé info */
-  .foot{margin-top:56px;width:100%;display:flex;align-items:center;justify-content:space-between;
-    border-top:1.5px solid var(--line);padding-top:26px}
-  .foot .l{text-align:left;font-size:20px;color:var(--ink-soft);font-weight:300;line-height:1.5}
-  .foot .l b{color:var(--ink);font-weight:600}
+  /* rodapé */
+  .foot{margin-top:56px;width:100%;display:flex;align-items:flex-end;justify-content:space-between;
+    border-top:2px solid var(--line);padding-top:22px}
+  .foot .l{text-align:left;font-size:26px;color:var(--ink-soft);font-weight:400;line-height:1.45}
+  .foot .l b{color:var(--ink);font-weight:700}
   .foot .r{text-align:right}
-  .foot .r .k{font-size:15px;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft)}
-  .foot .r .u{font-size:24px;color:var(--gold);font-weight:600;margin-top:4px}
+  .foot .r .k{font-size:20px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);font-weight:500}
+  .foot .r .u{font-size:31px;color:var(--gold);font-weight:700;margin-top:4px}
 </style>
 </head>
 <body>
@@ -81,7 +81,7 @@
   </div>
 
   <h1>ACISA e Jocelaine Rufatto<br><span class="gold">juntas pelo seu negócio</span></h1>
-  <p class="sub">A <b>Asociación Comercial e Industrial de San Alberto</b> apoia o treinamento intensivo de vendas que vai capacitar empresários e equipes comerciais da nossa região.</p>
+  <p class="sub">A <b>ACISA</b> apoia o treinamento intensivo que vai capacitar empresários e equipes comerciais de San Alberto.</p>
 
   <div class="rule"></div>
 
@@ -91,24 +91,24 @@
       <div class="k">O treinamento</div>
       <div class="n">Vendas de Alta Performance!</div>
       <div class="sl">O Código das Vendas Infalíveis</div>
-      <div class="w">com <b>Jocelaine Rufatto</b> · <b>31 de Julho</b>, 19h às 22h · <b>Churrascaria Costelão</b></div>
+      <div class="w">com <b>Jocelaine Rufatto</b><br><b>31 de Julho</b> · 19h às 22h · <b>Churrascaria Costelão</b></div>
     </div>
   </div>
 
-  <h2 class="ben-h">Associados ACISA têm <em>grandes benefícios</em></h2>
+  <h2 class="ben-h">Associados têm <em>grandes benefícios</em></h2>
 
   <div class="bens">
     <div class="ben">
       <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-      <div class="t"><b>G$ 260.000 por pessoa</b>valor exclusivo para associados</div>
+      <div class="t"><b>G$ 260.000</b>exclusivo do associado</div>
     </div>
     <div class="ben">
       <div class="ic"><svg viewBox="0 0 24 24"><path d="M17 8h1a4 4 0 1 1 0 8h-1M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8zM6 2v2M10 2v2M14 2v2"/></svg></div>
-      <div class="t"><b>Coffee break incluso</b>networking com empresários</div>
+      <div class="t"><b>Coffee break</b>incluso, com networking</div>
     </div>
     <div class="ben">
       <div class="ic"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
-      <div class="t"><b>Leve sua equipe</b>mesma condição para todo o time</div>
+      <div class="t"><b>Leve sua equipe</b>mesmo valor para o time</div>
     </div>
     <div class="ben">
       <div class="ic"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="M22 4L12 14.01l-3-3"/></svg></div>
