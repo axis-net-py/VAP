@@ -16,7 +16,8 @@ Sem data/valor = peça reutilizável em todas as edições do workshop; nunca ve
 - **QR → WhatsApp** `wa.me/595987244284` com mensagem pronta.
 - **Sem ACISA, sem data, sem valor.**
 - **Foto** da Jocelaine (arquivo `jocelaine-2.jpg` — escritório, blazer creme).
-- **Tema escuro** (preto + dourado), mesma assinatura da landing/flyers/slides.
+- **Tema claro** (creme/branco + dourado), estilo dos modelos de referência de workshop/webinar.
+- **Estilo visual:** foto da Jocelaine **recortada do fundo** (rembg) sobreposta a formas curvas douradas; "Workshop" em destaque; pequena área de tópicos/benefícios.
 
 ## Conteúdo (texto exato)
 
@@ -42,9 +43,10 @@ Roll-up vertical 80×200 cm. Estrutura de cima para baixo:
 
 ## Design system
 
-- Cores: `--bg:#0a0806`, dourado `#f0c04a` / gradiente `#f8e08a→#c08a2a`, texto `#f5f2ec`, muted `#b0a698`.
-- Fontes: Anton (títulos), Fraunces itálico (slogan), Poppins (corpo).
-- Glows dourados radiais nos cantos, como nos flyers escuros.
+- Cores (tema claro): fundo creme `#faf7f2`, dourado `#c08a2a` / gradiente `#d9a84a→#a9741f`, tinta `#151210`, muted `#5f574e`. Mesmo dourado do flyer de parceria ACISA (contraste em fundo claro).
+- Fontes: Anton (títulos/"Workshop"), Fraunces itálico (slogan/"Join our" style), Poppins (corpo).
+- Formas curvas douradas atrás/ao redor da foto recortada (estilo dos modelos de referência).
+- Foto recortada (`jocelaine-cut.png`) sobrepondo as curvas, saindo da moldura.
 
 ## Especificação técnica de saída
 
