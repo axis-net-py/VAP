@@ -57,6 +57,10 @@
   .ben .ic svg{width:28px;height:28px;stroke:var(--gold);fill:none;stroke-width:2}
   .ben .t{font-size:24px;line-height:1.3;color:var(--ink-soft);font-weight:400}
   .ben .t b{color:var(--ink);font-weight:700;display:block;font-size:30px;line-height:1.2;margin-bottom:2px}
+  .ben .t .old{color:#9b9188;font-weight:500;font-size:23px;text-decoration:line-through;
+    text-decoration-thickness:2px;margin-right:10px}
+  .ben .t .pr{display:flex;align-items:baseline;gap:0;flex-wrap:wrap;margin-bottom:2px}
+  .ben .t .pr b{display:inline;margin:0}
 
   /* rodapé */
   .foot{margin-top:auto;width:100%;display:flex;align-items:flex-end;justify-content:space-between;
@@ -100,7 +104,10 @@
   <div class="bens">
     <div class="ben">
       <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
-      <div class="t"><b>G$ 260.000</b>exclusivo do associado</div>
+      <div class="t">
+        <div class="pr"><span class="old">G$ 300.000</span><b>G$ 260.000</b></div>
+        exclusivo do associado
+      </div>
     </div>
     <div class="ben">
       <div class="ic"><svg viewBox="0 0 24 24"><path d="M17 8h1a4 4 0 1 1 0 8h-1M3 8h14v9a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V8zM6 2v2M10 2v2M14 2v2"/></svg></div>
