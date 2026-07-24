@@ -12,7 +12,7 @@ Sem data/valor = peça reutilizável em todas as edições do workshop; nunca ve
 ## Decisões (travadas no brainstorm)
 
 - **Um banner só** (não dois). Isca reutilizável.
-- **Formato:** banner 130 × 180 cm (largura × altura). Proporção ~3:4.
+- **Formato:** banner 85 × 180 cm (largura × altura) — medida de pronta entrega da gráfica.
 - **QR → WhatsApp** `wa.me/595987244284` com mensagem pronta.
 - **Sem ACISA, sem data, sem valor.**
 - **Foto** da Jocelaine de corpo inteiro (`jocelaine-3.png` — terno creme), recortada do fundo.
@@ -32,15 +32,15 @@ Sem data/valor = peça reutilizável em todas as edições do workshop; nunca ve
 
 ## Layout — leitura em 3 distâncias
 
-Banner 130×180 cm. Estrutura de cima para baixo (faixa central em duas colunas, aproveitando a largura):
+Banner 85×180 cm (vertical estreito). Estrutura em coluna única, de cima para baixo:
 
 1. **Barra dourada** no topo (assinatura visual).
 2. **~4m / gancho:** título "Workshop de Vendas de Alta Performance!" grande (Anton), com "Performance!" em dourado.
-3. **~2m / quem+o quê:** duas colunas — à esquerda a foto da Jocelaine recortada sobre disco dourado; à direita slogan (Fraunces itálico), "com Jocelaine Rufatto", filete dourado, lista dos módulos e a frase de impacto.
+3. **~2m / quem+o quê:** foto da Jocelaine recortada sobre disco dourado, centralizada; abaixo slogan (Fraunces itálico), "com Jocelaine Rufatto", lista dos módulos e a frase de impacto.
 5. **~1m / ação:** QR grande (mín. 8×8 cm impresso) + "Garanta sua vaga acessando o link no QR Code" + ícone/label WhatsApp.
 6. **Logo** Jocelaine Rufatto (versão branca `logo-jr.png`) no rodapé.
 
-**Zona de segurança:** ~7,5 cm de margem interna em todos os lados — nada crítico nessa faixa.
+**Zona de segurança:** ~5,5 cm de margem interna em todos os lados — nada crítico nessa faixa.
 
 ## Design system
 
@@ -52,11 +52,11 @@ Banner 130×180 cm. Estrutura de cima para baixo (faixa central em duas colunas,
 ## Especificação técnica de saída
 
 - **Fonte:** HTML único (`banner.html`) renderizado via Chrome headless (mesmo pipeline dos flyers).
-- **Proporção de trabalho:** 1300×1800 px (10 px/cm) para preview/tela.
+- **Proporção de trabalho:** 850×1800 px (10 px/cm) para preview/tela.
 - **QR:** gerado como PNG (biblioteca `qrcode` Python ou API), embutido no HTML como `<img>`. Nível de correção de erro Q ou H (tolera desgaste do banner). Cor: escuro sobre módulo claro para garantir contraste de leitura — QR sobre placa clara arredondada, não sobre o preto.
 - **Entregas:**
-  - `banner.png` — preview 1300×1800 px.
-  - `banner.pdf` — 130×180 cm, escala vetorial, cores forçadas (`print-color-adjust:exact`), gradientes dourados convertidos para cor sólida no PDF (evita artefato vetorial, como nos flyers).
+  - `banner.png` — preview 850×1800 px.
+  - `banner.pdf` — 85×180 cm, escala vetorial, cores forçadas (`print-color-adjust:exact`), gradientes dourados convertidos para cor sólida no PDF (evita artefato vetorial, como nos flyers).
 - **Gráfica:** o PDF em cm é o arquivo final; a gráfica trata bleed/sangria. Incluir margem interna generosa já cobre a sangria.
 
 ## Fora de escopo
