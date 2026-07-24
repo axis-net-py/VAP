@@ -15,61 +15,60 @@
     --line:rgba(21,18,16,.12);
   }
   *{margin:0;padding:0;box-sizing:border-box}
-  /* 80x200cm @ 10px/cm = 800x2000 */
-  body{width:800px;height:2000px;background:var(--paper);color:var(--ink);
+  /* 130x180cm @ 10px/cm = 1300x1800 */
+  body{width:1300px;height:1800px;background:var(--paper);color:var(--ink);
     font-family:'Poppins',sans-serif;overflow:hidden;position:relative}
 
-  /* formas de fundo */
-  .blob-tr{position:absolute;top:-160px;right:-220px;width:640px;height:640px;border-radius:50%;
-    background:var(--gold-grad);opacity:.16}
-  .blob-bl{position:absolute;bottom:-260px;left:-240px;width:680px;height:680px;border-radius:50%;
-    background:var(--gold-grad);opacity:.12}
-  .arc{position:absolute;top:0;right:0;width:100%;height:100%;pointer-events:none}
-
-  .goldbar{position:absolute;top:0;left:0;right:0;height:16px;background:var(--gold-grad);z-index:5}
+  .blob-tr{position:absolute;top:-260px;right:-300px;width:900px;height:900px;border-radius:50%;
+    background:var(--gold-grad);opacity:.15}
+  .blob-bl{position:absolute;bottom:-340px;left:-320px;width:920px;height:920px;border-radius:50%;
+    background:var(--gold-grad);opacity:.11}
+  .goldbar{position:absolute;top:0;left:0;right:0;height:20px;background:var(--gold-grad);z-index:5}
 
   .stage{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;
-    align-items:center;text-align:center;padding:80px 66px 120px}
+    align-items:center;text-align:center;padding:76px 80px 76px}
 
-  .eyebrow{font-size:27px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-weight:700}
-
-  .join{font-family:'Fraunces',serif;font-style:italic;font-weight:700;font-size:52px;color:var(--gold-2);
-    margin-top:12px;line-height:.9}
+  .eyebrow{font-size:34px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold);font-weight:700}
+  .join{font-family:'Fraunces',serif;font-style:italic;font-weight:700;font-size:64px;color:var(--gold-2);
+    margin-top:10px;line-height:.9}
   h1{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;
-    font-size:118px;line-height:.9;letter-spacing:.005em;color:var(--ink);margin-top:2px}
+    font-size:138px;line-height:.9;letter-spacing:.005em;color:var(--ink);margin-top:4px}
   h1 .l2{display:block;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 
-  /* foto sobre disco dourado */
-  .hero{position:relative;margin-top:18px;width:600px;height:640px;display:flex;justify-content:center}
+  /* faixa central: foto + texto lado a lado (aproveita a largura) */
+  .mid{display:flex;align-items:center;gap:46px;margin-top:34px;width:100%;flex:1}
+  .hero{position:relative;width:540px;height:680px;flex-shrink:0;display:flex;justify-content:center}
   .disc{position:absolute;bottom:0;left:50%;transform:translateX(-50%);
-    width:520px;height:520px;border-radius:50%;background:var(--gold-grad);
-    box-shadow:0 30px 80px rgba(192,138,42,.35)}
+    width:530px;height:530px;border-radius:50%;background:var(--gold-grad);
+    box-shadow:0 30px 80px rgba(192,138,42,.32)}
   .disc::after{content:"";position:absolute;inset:26px;border-radius:50%;border:3px solid rgba(255,255,255,.35)}
-  .hero img{position:relative;z-index:2;height:648px;width:auto;object-fit:contain;
+  .hero img{position:relative;z-index:2;height:678px;width:auto;object-fit:contain;
     filter:drop-shadow(0 10px 22px rgba(21,18,16,.18))}
 
-  .slogan{font-family:'Fraunces',serif;font-style:italic;font-weight:600;font-size:37px;
-    color:var(--gold);margin-top:18px}
-  .who{font-size:28px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink-soft);margin-top:10px}
+  .side{flex:1;text-align:left}
+  .slogan{font-family:'Fraunces',serif;font-style:italic;font-weight:600;font-size:50px;
+    color:var(--gold);line-height:1.16}
+  .who{font-size:31px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin-top:14px}
   .who b{color:var(--ink);font-weight:700}
-
-  .copy{font-size:31px;line-height:1.45;color:var(--ink-soft);font-weight:400;margin-top:22px;max-width:664px}
+  .side .rule{width:170px;height:5px;background:var(--gold-grad);border-radius:3px;margin:22px 0}
+  .copy{font-size:38px;line-height:1.4;color:var(--ink-soft);font-weight:400}
   .copy b{color:var(--ink);font-weight:600}
 
-  /* CTA / QR */
-  .cta{margin-top:30px;display:flex;align-items:center;gap:34px;width:100%;
-    background:#fff;border:2px solid var(--line);border-radius:28px;padding:34px 40px;text-align:left}
-  .cta .qr{width:210px;height:210px;flex-shrink:0;border-radius:16px;overflow:hidden;background:#fff;
-    box-shadow:0 10px 30px rgba(21,18,16,.12)}
+  /* CTA largo */
+  .cta{margin-top:10px;display:flex;align-items:center;gap:48px;width:100%;
+    background:#fff;border:3px solid var(--line);border-radius:34px;padding:36px 46px;text-align:left}
+  .cta .qr{width:270px;height:270px;flex-shrink:0;border-radius:20px;overflow:hidden;background:#fff;
+    box-shadow:0 12px 34px rgba(21,18,16,.12)}
   .cta .qr img{width:100%;height:100%;display:block}
-  .cta .tx .k{font-size:24px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700;
-    display:flex;align-items:center;gap:12px}
-  .cta .tx .k svg{width:30px;height:30px;fill:#25D366}
-  .cta .tx .h{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:46px;line-height:1.02;margin:8px 0 6px;color:var(--ink);white-space:nowrap}
-  .cta .tx .p{font-size:26px;color:var(--ink-soft);font-weight:400;line-height:1.35}
+  .cta .tx .k{font-size:32px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700;
+    display:flex;align-items:center;gap:14px}
+  .cta .tx .k svg{width:40px;height:40px;fill:#25D366}
+  .cta .tx .h{font-family:'Anton',sans-serif;text-transform:uppercase;font-size:70px;line-height:1.02;
+    margin:10px 0 8px;color:var(--ink);white-space:nowrap}
+  .cta .tx .p{font-size:34px;color:var(--ink-soft);font-weight:400;line-height:1.35}
 
-  .foot{margin-top:30px;display:flex;align-items:center;justify-content:center;gap:20px}
-  .foot img{height:56px}
+  .foot{margin-top:26px;display:flex;align-items:center;justify-content:center}
+  .foot img{height:66px}
 </style>
 </head>
 <body>
@@ -82,15 +81,18 @@
     <p class="join">Participe do</p>
     <h1>Workshop<span class="l2">de Vendas!</span></h1>
 
-    <div class="hero">
-      <div class="disc"></div>
-      <img src="jocelaine-cut.png" alt="Jocelaine Rufatto">
+    <div class="mid">
+      <div class="hero">
+        <div class="disc"></div>
+        <img src="jocelaine-cut.png" alt="Jocelaine Rufatto">
+      </div>
+      <div class="side">
+        <p class="slogan">Vendas de Alta Performance<br>O Código das Vendas Infalíveis</p>
+        <p class="who">com <b>Jocelaine Rufatto</b></p>
+        <div class="rule"></div>
+        <p class="copy">O tempo voa e seus resultados não estão superando as expectativas? Vem aí uma <b>grande oportunidade</b> de performar tuas vendas com técnicas infalíveis e criar <b>resultados extraordinários</b>.</p>
+      </div>
     </div>
-
-    <p class="slogan">Vendas de Alta Performance<br>O Código das Vendas Infalíveis</p>
-    <p class="who">com <b>Jocelaine Rufatto</b></p>
-
-    <p class="copy">O tempo voa e seus resultados não estão superando as expectativas? Vem aí uma <b>grande oportunidade</b> de performar tuas vendas com técnicas infalíveis e criar <b>resultados extraordinários</b>.</p>
 
     <div class="cta">
       <div class="qr"><img src="banner-qr.png" alt="QR WhatsApp"></div>

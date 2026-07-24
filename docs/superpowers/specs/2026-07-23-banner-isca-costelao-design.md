@@ -12,17 +12,17 @@ Sem data/valor = peça reutilizável em todas as edições do workshop; nunca ve
 ## Decisões (travadas no brainstorm)
 
 - **Um banner só** (não dois). Isca reutilizável.
-- **Formato:** roll-up retrátil 80×200 cm (pedestal próprio, transportável).
+- **Formato:** banner 130 × 180 cm (largura × altura). Proporção ~3:4.
 - **QR → WhatsApp** `wa.me/595987244284` com mensagem pronta.
 - **Sem ACISA, sem data, sem valor.**
-- **Foto** da Jocelaine (arquivo `jocelaine-2.jpg` — escritório, blazer creme).
+- **Foto** da Jocelaine de corpo inteiro (`jocelaine-3.png` — terno creme), recortada do fundo.
 - **Tema claro** (creme/branco + dourado), estilo dos modelos de referência de workshop/webinar.
 - **Estilo visual:** foto da Jocelaine **recortada do fundo** (rembg) sobreposta a formas curvas douradas; "Workshop" em destaque; pequena área de tópicos/benefícios.
 
 ## Conteúdo (texto exato)
 
 - **Título:** Workshop de Vendas de Alta Performance!
-- **Corpo:** "O tempo voa e seus resultados não estão superando as expectativas? Vem aí uma grande oportunidade de, com técnicas infalíveis, virar esse jogo e fazer um segundo semestre espetacular."
+- **Corpo:** "O tempo voa e seus resultados não estão superando as expectativas? Vem aí uma grande oportunidade de performar tuas vendas com técnicas infalíveis e criar resultados extraordinários."
 - **Slogan:** O Código das Vendas Infalíveis
 - **Assinatura:** com Jocelaine Rufatto
 - **CTA:** Garanta sua vaga acessando o link no QR Code
@@ -30,16 +30,15 @@ Sem data/valor = peça reutilizável em todas as edições do workshop; nunca ve
 
 ## Layout — leitura em 3 distâncias
 
-Roll-up vertical 80×200 cm. Estrutura de cima para baixo:
+Banner 130×180 cm. Estrutura de cima para baixo (faixa central em duas colunas, aproveitando a largura):
 
 1. **Barra dourada** no topo (assinatura visual).
 2. **~4m / gancho:** título "Workshop de Vendas de Alta Performance!" grande (Anton), com "Performance!" em dourado.
-3. **~2m / quem+o quê:** foto da Jocelaine (vertical, busto/corpo) + slogan em Fraunces itálico + "com Jocelaine Rufatto".
-4. **corpo:** parágrafo-isca (Poppins), largura confortável, centralizado.
+3. **~2m / quem+o quê:** duas colunas — à esquerda a foto da Jocelaine recortada sobre disco dourado; à direita slogan (Fraunces itálico), "com Jocelaine Rufatto", filete dourado e o parágrafo-isca.
 5. **~1m / ação:** QR grande (mín. 8×8 cm impresso) + "Garanta sua vaga acessando o link no QR Code" + ícone/label WhatsApp.
 6. **Logo** Jocelaine Rufatto (versão branca `logo-jr.png`) no rodapé.
 
-**Zona de segurança:** ~10 cm no topo (pode enrolar) e ~12 cm na base (estrutura mecânica do roll-up) — nada crítico nessas faixas.
+**Zona de segurança:** ~7,5 cm de margem interna em todos os lados — nada crítico nessa faixa.
 
 ## Design system
 
@@ -51,11 +50,11 @@ Roll-up vertical 80×200 cm. Estrutura de cima para baixo:
 ## Especificação técnica de saída
 
 - **Fonte:** HTML único (`banner.html`) renderizado via Chrome headless (mesmo pipeline dos flyers).
-- **Proporção de trabalho:** 800×2000 px (10 px/cm) para preview/tela.
+- **Proporção de trabalho:** 1300×1800 px (10 px/cm) para preview/tela.
 - **QR:** gerado como PNG (biblioteca `qrcode` Python ou API), embutido no HTML como `<img>`. Nível de correção de erro Q ou H (tolera desgaste do banner). Cor: escuro sobre módulo claro para garantir contraste de leitura — QR sobre placa clara arredondada, não sobre o preto.
 - **Entregas:**
-  - `banner.png` — preview alta-res (ex: 1600×4000 px).
-  - `banner.pdf` — 80×200 cm, escala vetorial, cores forçadas (`print-color-adjust:exact`), gradientes dourados convertidos para cor sólida no PDF (evita artefato vetorial, como nos flyers).
+  - `banner.png` — preview 1300×1800 px.
+  - `banner.pdf` — 130×180 cm, escala vetorial, cores forçadas (`print-color-adjust:exact`), gradientes dourados convertidos para cor sólida no PDF (evita artefato vetorial, como nos flyers).
 - **Gráfica:** o PDF em cm é o arquivo final; a gráfica trata bleed/sangria. Incluir margem interna generosa já cobre a sangria.
 
 ## Fora de escopo
@@ -67,4 +66,4 @@ Roll-up vertical 80×200 cm. Estrutura de cima para baixo:
 ## Arquivos no repo
 
 - Novos: `banner.html`, `banner.png`, `banner.pdf`, `banner-qr.png`.
-- Reutiliza: `jocelaine-2.jpg`, `logo-jr.png`.
+- Reutiliza: `jocelaine-3.png` (foto de corpo inteiro), `logo-jr-dark.png`.
