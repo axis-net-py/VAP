@@ -22,7 +22,9 @@ Sem data/valor = peça reutilizável em todas as edições do workshop; nunca ve
 ## Conteúdo (texto exato)
 
 - **Título:** Workshop de Vendas de Alta Performance!
-- **Corpo:** "O tempo voa e seus resultados não estão superando as expectativas? Vem aí uma grande oportunidade de performar tuas vendas com técnicas infalíveis e criar resultados extraordinários."
+- **Módulos do treinamento** (lista, marcadores dourados — emojis substituídos para não destoar da paleta na impressão):
+  Perfil Comportamental · Técnicas de PNL · Comunicação Persuasiva · Negociação Estratégica · Quebra de Objeções · Fechamento de Vendas · Alta Performance Comercial
+- **Frase de impacto:** "Vender não é dom. **É método.**"
 - **Slogan:** O Código das Vendas Infalíveis
 - **Assinatura:** com Jocelaine Rufatto
 - **CTA:** Garanta sua vaga acessando o link no QR Code
@@ -34,7 +36,7 @@ Banner 130×180 cm. Estrutura de cima para baixo (faixa central em duas colunas,
 
 1. **Barra dourada** no topo (assinatura visual).
 2. **~4m / gancho:** título "Workshop de Vendas de Alta Performance!" grande (Anton), com "Performance!" em dourado.
-3. **~2m / quem+o quê:** duas colunas — à esquerda a foto da Jocelaine recortada sobre disco dourado; à direita slogan (Fraunces itálico), "com Jocelaine Rufatto", filete dourado e o parágrafo-isca.
+3. **~2m / quem+o quê:** duas colunas — à esquerda a foto da Jocelaine recortada sobre disco dourado; à direita slogan (Fraunces itálico), "com Jocelaine Rufatto", filete dourado, lista dos módulos e a frase de impacto.
 5. **~1m / ação:** QR grande (mín. 8×8 cm impresso) + "Garanta sua vaga acessando o link no QR Code" + ícone/label WhatsApp.
 6. **Logo** Jocelaine Rufatto (versão branca `logo-jr.png`) no rodapé.
 

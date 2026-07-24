@@ -32,30 +32,36 @@
   .join{font-family:'Fraunces',serif;font-style:italic;font-weight:700;font-size:64px;color:var(--gold-2);
     margin-top:10px;line-height:.9}
   h1{font-family:'Anton',sans-serif;font-weight:400;text-transform:uppercase;
-    font-size:138px;line-height:.9;letter-spacing:.005em;color:var(--ink);margin-top:4px}
+    font-size:130px;line-height:.9;letter-spacing:.005em;color:var(--ink);margin-top:4px}
   h1 .l2{display:block;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 
   /* faixa central: foto + texto lado a lado (aproveita a largura) */
-  .mid{display:flex;align-items:center;gap:46px;margin-top:34px;width:100%;flex:1}
-  .hero{position:relative;width:540px;height:680px;flex-shrink:0;display:flex;justify-content:center}
+  .mid{display:flex;align-items:center;gap:44px;margin-top:26px;width:100%;flex:1}
+  .hero{position:relative;width:520px;height:660px;flex-shrink:0;display:flex;justify-content:center}
   .disc{position:absolute;bottom:0;left:50%;transform:translateX(-50%);
     width:530px;height:530px;border-radius:50%;background:var(--gold-grad);
     box-shadow:0 30px 80px rgba(192,138,42,.32)}
   .disc::after{content:"";position:absolute;inset:26px;border-radius:50%;border:3px solid rgba(255,255,255,.35)}
-  .hero img{position:relative;z-index:2;height:678px;width:auto;object-fit:contain;
+  .hero img{position:relative;z-index:2;height:658px;width:auto;object-fit:contain;
     filter:drop-shadow(0 10px 22px rgba(21,18,16,.18))}
 
   .side{flex:1;text-align:left}
-  .slogan{font-family:'Fraunces',serif;font-style:italic;font-weight:600;font-size:50px;
+  .slogan{font-family:'Fraunces',serif;font-style:italic;font-weight:600;font-size:44px;
     color:var(--gold);line-height:1.16}
-  .who{font-size:31px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin-top:14px}
+  .who{font-size:29px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);margin-top:12px}
   .who b{color:var(--ink);font-weight:700}
-  .side .rule{width:170px;height:5px;background:var(--gold-grad);border-radius:3px;margin:22px 0}
-  .copy{font-size:38px;line-height:1.4;color:var(--ink-soft);font-weight:400}
-  .copy b{color:var(--ink);font-weight:600}
+  .side .rule{width:170px;height:5px;background:var(--gold-grad);border-radius:3px;margin:18px 0}
+  .mods-k{font-size:26px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:16px}
+  .mods{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .mods li{display:flex;align-items:center;gap:15px;font-size:32px;color:var(--ink);font-weight:500;line-height:1.15}
+  .mods li::before{content:"";width:15px;height:15px;border-radius:50%;flex-shrink:0;
+    background:var(--gold-grad);box-shadow:0 0 0 5px rgba(192,138,42,.16)}
+  .punch{margin-top:22px;font-family:'Anton',sans-serif;text-transform:uppercase;
+    font-size:44px;line-height:1.06;color:var(--ink);white-space:nowrap}
+  .punch em{font-style:normal;background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 
   /* CTA largo */
-  .cta{margin-top:10px;display:flex;align-items:center;gap:48px;width:100%;
+  .cta{margin-top:16px;display:flex;align-items:center;gap:48px;width:100%;
     background:#fff;border:3px solid var(--line);border-radius:34px;padding:36px 46px;text-align:left}
   .cta .qr{width:270px;height:270px;flex-shrink:0;border-radius:20px;overflow:hidden;background:#fff;
     box-shadow:0 12px 34px rgba(21,18,16,.12)}
@@ -90,7 +96,17 @@
         <p class="slogan">Vendas de Alta Performance<br>O Código das Vendas Infalíveis</p>
         <p class="who">com <b>Jocelaine Rufatto</b></p>
         <div class="rule"></div>
-        <p class="copy">O tempo voa e seus resultados não estão superando as expectativas? Vem aí uma <b>grande oportunidade</b> de performar tuas vendas com técnicas infalíveis e criar <b>resultados extraordinários</b>.</p>
+        <p class="mods-k">Módulos do treinamento</p>
+        <ul class="mods">
+          <li>Perfil Comportamental</li>
+          <li>Técnicas de PNL</li>
+          <li>Comunicação Persuasiva</li>
+          <li>Negociação Estratégica</li>
+          <li>Quebra de Objeções</li>
+          <li>Fechamento de Vendas</li>
+          <li>Alta Performance Comercial</li>
+        </ul>
+        <p class="punch">Vender não é dom. <em>É método.</em></p>
       </div>
     </div>
 
