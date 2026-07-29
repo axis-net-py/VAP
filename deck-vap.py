@@ -391,16 +391,17 @@ h1,h2,.medal-n,.mc-n,.q-mark,.nine span{{font-family:'Playfair Display',serif;fo
   min-height:0}}
 .col{{display:flex;flex-direction:column;gap:26px;min-height:0}}
 .card{{display:flex;flex-direction:column;flex:1;min-height:0}}
-.shot{{flex:0 0 306px;border-radius:32px;overflow:hidden;position:relative;
+.shot{{flex:1 1 auto;min-height:0;border-radius:32px;overflow:hidden;position:relative;
   box-shadow:0 16px 36px rgba(21,18,16,.16)}}
-.shot img{{width:100%;height:100%;object-fit:cover;display:block}}
+.card.gold{{flex:0 0 auto;padding:26px 34px}}   /* destaque encolhe, imagem cresce */
+.shot img{{width:100%;height:100%;object-fit:cover;object-position:50% 45%;display:block}}
 .shot::after{{content:"";position:absolute;inset:0;border-radius:32px;
   box-shadow:inset 0 0 0 1px rgba(192,138,42,.38)}}
 .card{{background:var(--card);border:1px solid var(--line);border-radius:32px;
   padding:32px 38px;box-shadow:0 12px 30px rgba(21,18,16,.05)}}
 .card.gold{{background:var(--paper-2);border-color:#DFC894}}
 .card-k{{font-size:17px;letter-spacing:.24em;text-transform:uppercase;
-  color:var(--gold-deep);font-weight:500;margin-bottom:24px}}
+  color:var(--gold-deep);font-weight:500;margin-bottom:18px}}
 .card ul{{list-style:none}}
 .card ul li{{position:relative;padding-left:34px;font-size:27px;line-height:1.5;
   margin-bottom:16px}}
@@ -408,12 +409,11 @@ h1,h2,.medal-n,.mc-n,.q-mark,.nine span{{font-family:'Playfair Display',serif;fo
 .card ul{{margin:auto 0}}
 .card ul li::before{{content:"";position:absolute;left:0;top:14px;width:11px;height:11px;
   transform:rotate(45deg);background:var(--grad)}}
-.focus{{font-size:26px;line-height:1.4;color:var(--gold-deep);font-weight:500;
-  margin:auto 0}}
+.focus{{font-size:25px;line-height:1.38;color:var(--gold-deep);font-weight:500}}
 
-.note{{background:var(--ink);border-radius:26px;padding:26px 36px;flex:0 0 auto}}
+.note{{background:var(--ink);border-radius:26px;padding:22px 32px;flex:0 0 auto}}
 .note-k{{display:block;font-size:16px;letter-spacing:.24em;text-transform:uppercase;
-  color:var(--gold-lt);margin-bottom:12px}}
+  color:var(--gold-lt);margin-bottom:9px}}
 .note p{{font-size:22px;line-height:1.45;color:#EDE5D8}}
 
 /* ---------------- resumo ---------------- */
