@@ -21,14 +21,6 @@
 
   .orn{position:absolute;inset:0;width:100%;height:100%;z-index:1}
 
-  .bracket{position:absolute;z-index:4}
-  .bracket i{position:absolute;display:block;background:var(--gold-grad);border-radius:2px}
-  .br-tl{top:34px;left:42px}
-  .br-tl i:first-child{width:7px;height:88px;left:0;top:0}
-  .br-tl i:last-child{width:470px;height:7px;left:0;top:0}
-  .br-br{bottom:34px;right:42px}
-  .br-br i:first-child{width:7px;height:88px;right:0;bottom:0}
-  .br-br i:last-child{width:470px;height:7px;right:0;bottom:0}
 
   .stage{position:absolute;inset:0;z-index:5;display:flex;flex-direction:column;
     align-items:center;text-align:center;padding:32px 150px 0}
@@ -69,7 +61,7 @@
   .sign .who{font-size:16px;color:var(--ink);font-weight:600}
   .sign .role{margin-top:1px;font-size:13.5px;color:var(--ink-soft);line-height:1.34}
 
-  .logo-jr{position:absolute;top:32px;right:46px;height:38px;z-index:6}
+  .logo-jr{position:absolute;top:34px;right:48px;height:60px;z-index:6}
 
   @page{size:A4 landscape;margin:0}
   @media print{html,body{background:#fff}}
@@ -94,9 +86,6 @@
     <!-- canto oposto: mesma forma girada 180 graus = vortice -->
     <use href="#sweep" transform="rotate(180 561.5 397)"/>
   </svg>
-
-  <div class="bracket br-tl"><i></i><i></i></div>
-  <div class="bracket br-br"><i></i><i></i></div>
 
   <div class="stage">
     <img class="logo-jnr" src="jnr-logo-black.png" alt="JNR Desenvolvimento Humano &amp; Corporativo">
