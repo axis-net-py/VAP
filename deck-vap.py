@@ -238,16 +238,14 @@ def slide_step(s, i):
           <div class="card-k">Como aplicar na prática</div>
           <ul>{hows}</ul>
         </div>
-        <div class="note"><span class="note-k">Para estudar e falar</span>
-          <p>{html.escape(s["note"])}</p></div>
-      </div>
-      <div class="col">
-        <figure class="shot"><img src="{s["img"]}" alt=""></figure>
         <div class="card gold">
           <div class="card-k">Ponto de atenção</div>
           <p class="focus">{html.escape(s["focus"])}</p>
         </div>
+        <div class="note"><span class="note-k">Para estudar e falar</span>
+          <p>{html.escape(s["note"])}</p></div>
       </div>
+      <figure class="shot"><img src="{s["img"]}" alt=""></figure>
     </div>
   </div>
   {FOOT}
@@ -398,10 +396,10 @@ h1,h2,.medal-n,.mc-n,.q-mark,.nine span{{font-family:'Playfair Display',serif;fo
 .shot::after{{content:"";position:absolute;inset:0;border-radius:32px;
   box-shadow:inset 0 0 0 1px rgba(192,138,42,.38)}}
 .card{{background:var(--card);border:1px solid var(--line);border-radius:32px;
-  padding:32px 38px;box-shadow:0 12px 30px rgba(21,18,16,.05)}}
+  padding:26px 32px;box-shadow:0 12px 30px rgba(21,18,16,.05)}}
 .card.gold{{background:var(--paper-2);border-color:#DFC894}}
-.card-k{{font-size:17px;letter-spacing:.24em;text-transform:uppercase;
-  color:var(--gold-deep);font-weight:500;margin-bottom:18px}}
+.card-k{{font-size:16px;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--gold-deep);font-weight:500;margin-bottom:14px}}
 .card ul{{list-style:none}}
 .card ul li{{position:relative;padding-left:34px;font-size:27px;line-height:1.5;
   margin-bottom:16px}}
@@ -409,12 +407,12 @@ h1,h2,.medal-n,.mc-n,.q-mark,.nine span{{font-family:'Playfair Display',serif;fo
 .card ul{{margin:auto 0}}
 .card ul li::before{{content:"";position:absolute;left:0;top:14px;width:11px;height:11px;
   transform:rotate(45deg);background:var(--grad)}}
-.focus{{font-size:25px;line-height:1.38;color:var(--gold-deep);font-weight:500}}
+.focus{{font-size:24px;line-height:1.36;color:var(--gold-deep);font-weight:500}}
 
-.note{{background:var(--ink);border-radius:26px;padding:22px 32px;flex:0 0 auto}}
+.note{{background:var(--ink);border-radius:26px;padding:20px 30px;flex:0 0 auto}}
 .note-k{{display:block;font-size:16px;letter-spacing:.24em;text-transform:uppercase;
   color:var(--gold-lt);margin-bottom:9px}}
-.note p{{font-size:22px;line-height:1.45;color:#EDE5D8}}
+.note p{{font-size:21px;line-height:1.42;color:#EDE5D8}}
 
 /* ---------------- resumo ---------------- */
 .sum{{display:flex;flex-direction:column}}
