@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#151210;
+    --ink-soft:#5f574e;
+    --paper:#fdfaf4;
+    --paper-2:#f4ecdc;
+    --gold:#c08a2a;
+    --gold-deep:#96651a;
+    --gold-grad:linear-gradient(120deg,#e6bd5e 0%,#c08a2a 55%,#a9741f 100%);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:#8a8a8a}
+  /* A4 paisagem @96dpi = 1123 x 794 */
+  .page{position:relative;width:1123px;height:794px;background:var(--paper);
+    overflow:hidden;font-family:'Poppins',sans-serif;color:var(--ink)}
+
+  .orn{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+
+  .bracket{position:absolute;z-index:4}
+  .bracket i{position:absolute;display:block;background:var(--gold-grad);border-radius:2px}
+  .br-tl{top:34px;left:42px}
+  .br-tl i:first-child{width:7px;height:88px;left:0;top:0}
+  .br-tl i:last-child{width:470px;height:7px;left:0;top:0}
+  .br-br{bottom:34px;right:42px}
+  .br-br i:first-child{width:7px;height:88px;right:0;bottom:0}
+  .br-br i:last-child{width:470px;height:7px;right:0;bottom:0}
+
+  .stage{position:absolute;inset:0;z-index:5;display:flex;flex-direction:column;
+    align-items:center;text-align:center;padding:32px 150px 0}
+
+  .logo-jnr{height:86px}
+  .kicker{margin-top:12px;font-size:13.5px;letter-spacing:.44em;text-transform:uppercase;
+    color:var(--gold-deep);font-weight:700}
+  .rule{width:560px;height:2px;margin-top:11px;
+    background:linear-gradient(90deg,transparent,var(--gold) 16%,var(--gold) 84%,transparent)}
+
+  .certify{margin-top:17px;font-size:18px;color:var(--ink-soft)}
+  .nameline{margin-top:9px;width:760px}
+  .nameline .slot{height:58px;border-bottom:2px solid var(--gold)}
+
+  .lead{margin-top:15px;font-size:16.5px;color:var(--ink-soft)}
+  .course{margin-top:7px;width:900px;font-size:29px;font-weight:700;line-height:1.2;
+    letter-spacing:.005em;text-transform:uppercase;
+    background:var(--gold-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .course small{display:block;font-size:22px;font-weight:600;letter-spacing:.02em}
+  .meta{margin-top:9px;font-size:16px;color:var(--ink-soft)}
+  .meta b{font-weight:600;color:var(--ink)}
+
+  /* modulos em duas colunas */
+  .mod-title{margin-top:19px;font-size:12.5px;letter-spacing:.32em;text-transform:uppercase;
+    font-weight:700;color:var(--gold-deep)}
+  .modules{margin-top:11px;width:790px;display:grid;grid-template-columns:1fr 1fr;
+    gap:9px 44px;text-align:left}
+  .module{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600;
+    color:var(--ink);padding-bottom:6px;border-bottom:1px solid rgba(192,138,42,.42)}
+  .module span{width:7px;height:7px;flex:none;transform:rotate(45deg);
+    background:var(--gold-grad)}
+  .module.wide{grid-column:1 / -1;width:fit-content;margin:0 auto;padding-left:2px;padding-right:2px}
+
+  .signrow{position:absolute;left:0;right:0;bottom:42px;z-index:5;display:flex;
+    justify-content:center}
+  .sign{width:430px;text-align:center}
+  .sign .space{height:46px}
+  .sign .line{height:2px;background:var(--gold);margin-bottom:10px}
+  .sign .who{font-size:16px;color:var(--ink);font-weight:600}
+  .sign .role{margin-top:1px;font-size:13.5px;color:var(--ink-soft);line-height:1.34}
+
+  .logo-jr{position:absolute;top:32px;right:46px;height:38px;z-index:6}
+
+  @page{size:A4 landscape;margin:0}
+  @media print{html,body{background:#fff}}
+</style>
+</head>
+<body>
+
+<section class="page">
+  <svg class="orn" viewBox="0 0 1123 794" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="gg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#e8c268"/><stop offset="52%" stop-color="#c08a2a"/>
+        <stop offset="100%" stop-color="#9c6a1c"/>
+      </linearGradient>
+    </defs>
+    <!-- varredura: dourado dominante, preto como fio secundario -->
+    <g id="sweep">
+      <path d="M0,236 Q22,610 372,794 L0,794 Z" fill="url(#gg)"/>
+      <path d="M0,192 Q26,584 296,794 L330,794 Q24,596 0,214 Z" fill="#151210"/>
+      <path d="M0,150 Q30,556 232,794 L272,794 Q27,570 0,172 Z" fill="#f4ecdc"/>
+    </g>
+    <!-- canto oposto: mesma forma girada 180 graus = vortice -->
+    <use href="#sweep" transform="rotate(180 561.5 397)"/>
+  </svg>
+
+  <div class="bracket br-tl"><i></i><i></i></div>
+  <div class="bracket br-br"><i></i><i></i></div>
+
+  <div class="stage">
+    <img class="logo-jnr" src="jnr-logo-black.png" alt="JNR Desenvolvimento Humano &amp; Corporativo">
+    <div class="kicker">Certificado de Participação</div>
+    <div class="rule"></div>
+
+    <div class="certify">Certificamos que</div>
+    <div class="nameline"><div class="slot"></div></div>
+
+    <div class="lead">concluiu com empenho e dedicação o treinamento</div>
+    <div class="course">Vendas de Alta Performance
+      <small>O Código das Vendas Infalíveis</small></div>
+    <div class="meta">carga horária de <b>3 horas presenciais</b> ·
+      <b>3 de agosto de 2026</b> · San Alberto — Paraguay</div>
+
+    <div class="mod-title">Módulos abordados</div>
+    <div class="modules">
+      <div class="module"><span></span>Perfil Comportamental</div>
+      <div class="module"><span></span>Negociação Estratégica</div>
+      <div class="module"><span></span>Técnicas de PNL</div>
+      <div class="module"><span></span>Quebra de Objeções</div>
+      <div class="module"><span></span>Comunicação Persuasiva</div>
+      <div class="module"><span></span>Fechamento de Vendas</div>
+      <div class="module wide"><span></span>Alta Performance Comercial</div>
+    </div>
+  </div>
+
+  <div class="signrow">
+    <div class="sign">
+      <div class="space"></div>
+      <div class="line"></div>
+      <div class="who">Jocelaine Nichelle Rufatto</div>
+      <div class="role">Consultora · Master Coach · Analista Comportamental</div>
+    </div>
+  </div>
+
+  <img class="logo-jr" src="logo-jr-dark.png" alt="Jocelaine Rufatto">
+</section>
+
+</body>
+</html>
