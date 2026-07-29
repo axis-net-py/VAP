@@ -55,12 +55,11 @@
   .mod-title{margin-top:19px;font-size:12.5px;letter-spacing:.32em;text-transform:uppercase;
     font-weight:700;color:var(--gold-deep)}
   .modules{margin-top:11px;width:790px;display:grid;grid-template-columns:1fr 1fr;
-    gap:9px 44px;text-align:left}
+    grid-template-rows:repeat(4,auto);grid-auto-flow:column;gap:9px 44px;text-align:left}
   .module{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:600;
     color:var(--ink);padding-bottom:6px;border-bottom:1px solid rgba(192,138,42,.42)}
   .module span{width:7px;height:7px;flex:none;transform:rotate(45deg);
     background:var(--gold-grad)}
-  .module.wide{grid-column:1 / -1;width:fit-content;margin:0 auto;padding-left:2px;padding-right:2px}
 
   .signrow{position:absolute;left:0;right:0;bottom:42px;z-index:5;display:flex;
     justify-content:center}
@@ -116,12 +115,12 @@
     <div class="mod-title">Módulos abordados</div>
     <div class="modules">
       <div class="module"><span></span>Perfil Comportamental</div>
-      <div class="module"><span></span>Negociação Estratégica</div>
       <div class="module"><span></span>Técnicas de PNL</div>
-      <div class="module"><span></span>Quebra de Objeções</div>
       <div class="module"><span></span>Comunicação Persuasiva</div>
+      <div class="module"><span></span>Negociação Estratégica</div>
+      <div class="module"><span></span>Quebra de Objeções</div>
       <div class="module"><span></span>Fechamento de Vendas</div>
-      <div class="module wide"><span></span>Alta Performance Comercial</div>
+      <div class="module"><span></span>Alta Performance Comercial</div>
     </div>
   </div>
 
