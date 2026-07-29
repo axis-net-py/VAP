@@ -22,7 +22,29 @@ GOLD_LT   = "E6BD5E"
 LINE      = "E3D3B0"
 WHITE     = "FFFFFF"
 
-FONT = "Poppins"
+# tipografia herdada do sistema de design do Metodo LAP
+FONT_TITLE = "Playfair Display"     # titulos e numerais
+FONT_BODY  = "DM Sans 14pt"         # corpo, rotulos e rodape
+FONT = FONT_BODY
+
+# rodape: sai a marca do cliente, entra o nome do treinamento
+FOOTER_OLD = "MAN MOTORS S.A."
+FOOTER_NEW = "VENDAS DE ALTA PERFORMANCE  •  O CÓDIGO DAS VENDAS INFALÍVEIS"
+
+
+def is_title(shape_name, run):
+    """Titulos e numerais do LAP: negrito a partir de 16pt."""
+    if not run.font.bold:
+        return False
+    sz = run.font.size.pt if run.font.size else 0
+    if sz < 16:
+        return False
+    return not (shape_name == "Text 9" and sz == 17.0)   # apoio da capa fica no corpo
+
+
+def set_spacing(run, hundredths):
+    """letter-spacing do rodape (o python-pptx nao expoe; vai no XML)."""
+    run.font._rPr.set("spc", str(hundredths))
 # emoji colorido foge da paleta e nem toda maquina tem o glifo:
 # vira um losango dourado, que existe em qualquer fonte
 ICON = "◆"
@@ -134,6 +156,14 @@ def restyle(src_path, out_path):
         red_boxes = [bbox(sh) for sh in slide.shapes if shape_fill_hex(sh) == RED_OLD]
 
         for sh in slide.shapes:
+            # -------------------------------------------------- rodape
+            if sh.has_text_frame and FOOTER_OLD in sh.text_frame.text.upper():
+                for para in sh.text_frame.paragraphs:
+                    if FOOTER_OLD not in "".join(r.text for r in para.runs).upper():
+                        continue
+                    for n, r in enumerate(para.runs):
+                        r.text = FOOTER_NEW if n == 0 else ""
+
             # -------------------------------------------------- preenchimentos
             cur = shape_fill_hex(sh)
             if cur in FILL_MAP:
@@ -159,7 +189,9 @@ def restyle(src_path, out_path):
                             r.font.name = FONT
                             r.font.color.rgb = RGBColor.from_string(GOLD)
                             continue
-                        r.font.name = FONT
+                        r.font.name = FONT_TITLE if is_title(sh.name, r) else FONT_BODY
+                        if r.font.size and r.font.size.pt <= 11:
+                            set_spacing(r, 60)      # rotulos e rodape respiram
                         c = hexof(r.font.color)
                         if c in TEXT_MAP:
                             r.font.color.rgb = RGBColor.from_string(TEXT_MAP[c])
