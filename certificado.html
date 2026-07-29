@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,wght@0,600;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#151210;
+    --ink-soft:#5f574e;
+    --paper:#faf7f2;
+    --paper-2:#f1ebe1;
+    --gold:#c08a2a;
+    --gold-2:#d9a84a;
+    --gold-grad:linear-gradient(120deg,#e6bd5e 0%,#c08a2a 55%,#a9741f 100%);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{background:#8a8a8a}
+  /* A4 paisagem @96dpi = 1123 x 794 */
+  .page{position:relative;width:1123px;height:794px;background:var(--paper);
+    overflow:hidden;font-family:'Poppins',sans-serif;color:var(--ink)}
+  .page + .page{margin-top:24px}
+
+  /* ---- ornamento: varreduras em SVG (cantos, nunca sobre o texto) ---- */
+  .orn{position:absolute;inset:0;width:100%;height:100%;z-index:1}
+
+  /* cantoneiras douradas */
+  .bracket{position:absolute;z-index:4}
+  .bracket i{position:absolute;display:block;background:var(--gold-grad);border-radius:2px}
+  .br-tl{top:36px;left:44px}
+  .br-tl i:first-child{width:8px;height:96px;left:0;top:0}
+  .br-tl i:last-child{width:520px;height:8px;left:0;top:0}
+  .br-br{bottom:36px;right:44px}
+  .br-br i:first-child{width:8px;height:96px;right:0;bottom:0}
+  .br-br i:last-child{width:520px;height:8px;right:0;bottom:0}
+
+  .stage{position:absolute;inset:0;z-index:5;display:flex;flex-direction:column;
+    align-items:center;text-align:center;padding:60px 116px 52px}
+
+  /* ---------- pagina 1 ---------- */
+  .logo{height:104px;margin-top:14px}
+  .kicker{margin-top:26px;font-size:15px;letter-spacing:.42em;text-transform:uppercase;
+    color:var(--gold);font-weight:700}
+  .rule-top{width:640px;height:2px;margin:22px 0 0;
+    background:linear-gradient(90deg,transparent,var(--gold) 18%,var(--gold) 82%,transparent)}
+
+  .certify{margin-top:22px;font-size:20px;color:var(--ink-soft);font-weight:400}
+  .nameline{margin-top:10px;width:760px}
+  .nameline .slot{height:46px;border-bottom:2px solid rgba(21,18,16,.42)}
+  .nameline .hint{margin-top:7px;font-size:12px;letter-spacing:.24em;text-transform:uppercase;
+    color:var(--ink-soft);opacity:.72}
+
+  .body{margin-top:16px;width:880px;font-size:19px;line-height:1.6;color:var(--ink-soft);text-wrap:balance}
+  .body b{font-weight:700;color:var(--ink)}
+  .course{margin-top:10px;font-family:'Anton',sans-serif;font-size:31px;line-height:1.16;
+    letter-spacing:.012em;color:var(--ink);text-transform:uppercase;width:820px}
+  .course em{font-style:normal;background:var(--gold-grad);-webkit-background-clip:text;
+    background-clip:text;color:transparent}
+
+  .signrow{position:absolute;left:0;right:0;bottom:62px;z-index:5;
+    display:flex;justify-content:center;gap:120px;padding-left:150px}
+  .sign{width:262px;text-align:center}
+  .sign .line{height:2px;background:var(--gold);opacity:.85;margin-bottom:11px}
+  .sign .who{font-size:16.5px;color:var(--ink);font-weight:600}
+  .sign .role{font-size:14.5px;color:var(--ink-soft);line-height:1.36}
+
+  /* ---------- pagina 2 ---------- */
+  .p2 .stage{padding:70px 150px 110px 210px;justify-content:center}
+  .p2-head{width:100%;max-width:720px;text-wrap:balance;font-weight:700;font-size:21px;line-height:1.44;
+    text-transform:uppercase;letter-spacing:.02em;color:var(--ink-soft)}
+  .topics{margin-top:52px;width:100%;display:flex;flex-direction:column;
+    align-items:center;gap:46px}
+  .topic{padding-bottom:9px;border-bottom:2px solid var(--gold);
+    font-weight:700;font-size:21px;letter-spacing:.03em;text-transform:uppercase;color:var(--ink)}
+  .p2-foot{position:absolute;left:210px;right:150px;bottom:56px;z-index:5;text-align:center;
+    font-size:14.5px;color:var(--ink-soft);letter-spacing:.02em}
+  .logo-corner{position:absolute;left:54px;bottom:38px;height:44px;z-index:6}
+
+  @page{size:A4 landscape;margin:0}
+  @media print{
+    html,body{background:#fff}
+    .page{margin:0!important;page-break-after:always;break-after:page}
+    .page:last-child{page-break-after:auto;break-after:auto}
+  }
+</style>
+</head>
+<body>
+
+<!-- ======================= PAGINA 1 ======================= -->
+<section class="page">
+  <svg class="orn" viewBox="0 0 1123 794" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#e6bd5e"/><stop offset="55%" stop-color="#c08a2a"/>
+        <stop offset="100%" stop-color="#a9741f"/>
+      </linearGradient>
+    </defs>
+    <!-- varredura inferior-esquerda -->
+    <path d="M0,236 Q22,610 372,794 L0,794 Z" fill="#151210"/>
+    <path d="M0,196 Q26,586 300,794 L372,794 Q22,610 0,236 Z" fill="url(#g)"/>
+    <path d="M0,150 Q30,556 232,794 L300,794 Q26,586 0,196 Z" fill="#f1ebe1"/>
+    <!-- canto superior-direito -->
+    <path d="M1123,0 L742,0 Q1006,214 1123,286 Z" fill="#151210"/>
+    <path d="M742,0 L672,0 Q980,250 1123,330 L1123,286 Q1006,214 742,0 Z" fill="url(#g)"/>
+    <path d="M672,0 L622,0 Q958,282 1123,364 L1123,330 Q980,250 672,0 Z" fill="#f1ebe1"/>
+  </svg>
+  <div class="bracket br-tl"><i></i><i></i></div>
+  <div class="bracket br-br"><i></i><i></i></div>
+
+  <div class="stage">
+    <img class="logo" src="logo-jr-dark.png" alt="Jocelaine Rufatto">
+    <div class="kicker">Certificado de Participação</div>
+    <div class="rule-top"></div>
+
+    <div class="certify">Certificamos que</div>
+    <div class="nameline">
+      <div class="slot"></div>
+      <div class="hint">Nome do participante</div>
+    </div>
+
+    <p class="body">concluiu com empenho e dedicação o treinamento</p>
+    <div class="course">Vendas de Alta Performance<br><em>O Código das Vendas Infalíveis</em></div>
+    <p class="body">com carga horária de <b>3 horas presenciais</b>, realizado em
+      <b>3 de agosto de 2026</b>, em San Alberto — Paraguay.</p>
+  </div>
+
+  <div class="signrow">
+    <div class="sign">
+      <div class="line"></div>
+      <div class="who">Data</div>
+    </div>
+    <div class="sign">
+      <div class="line"></div>
+      <div class="who">Jocelaine Nichelle Rufatto</div>
+      <div class="role">Consultora<br>Master Coach<br>Analista Comportamental</div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= PAGINA 2 ======================= -->
+<section class="page p2">
+  <svg class="orn" viewBox="0 0 1123 794" preserveAspectRatio="none">
+    <defs>
+      <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#e6bd5e"/><stop offset="55%" stop-color="#c08a2a"/>
+        <stop offset="100%" stop-color="#a9741f"/>
+      </linearGradient>
+    </defs>
+    <!-- varredura inferior-esquerda -->
+    <path d="M0,236 Q22,610 372,794 L0,794 Z" fill="#151210"/>
+    <path d="M0,196 Q26,586 300,794 L372,794 Q22,610 0,236 Z" fill="url(#g)"/>
+    <path d="M0,150 Q30,556 232,794 L300,794 Q26,586 0,196 Z" fill="#f1ebe1"/>
+    <!-- canto superior-direito -->
+    <path d="M1123,0 L742,0 Q1006,214 1123,286 Z" fill="#151210"/>
+    <path d="M742,0 L672,0 Q980,250 1123,330 L1123,286 Q1006,214 742,0 Z" fill="url(#g)"/>
+    <path d="M672,0 L622,0 Q958,282 1123,364 L1123,330 Q980,250 672,0 Z" fill="#f1ebe1"/>
+  </svg>
+  <div class="bracket br-tl"><i></i><i></i></div>
+  <div class="bracket br-br"><i></i><i></i></div>
+
+  <div class="stage">
+    <div class="p2-head">As seguintes temáticas foram trabalhadas no desenvolvimento do treinamento Vendas de Alta Performance.</div>
+    <div class="topics">
+      <div class="topic">Mentalidade de Vendas de Alta Performance</div>
+      <div class="topic">Vender vs Atender — A Virada de Chave</div>
+      <div class="topic">O Código DISC nas Vendas</div>
+      <div class="topic">Vendas nas Redes Sociais</div>
+    </div>
+  </div>
+
+  <div class="p2-foot">3 de agosto de 2026 · Churrascaria Costelão · San Alberto — Paraguay</div>
+  <img class="logo-corner" src="logo-jr.png" alt="Jocelaine Rufatto">
+</section>
+
+</body>
+</html>
