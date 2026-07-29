@@ -12,7 +12,7 @@ W, H = 1920, 1080
 
 # --------------------------------------------------------------------- conteudo
 STEPS = [
-    dict(n="01", t="Preparação", lead="Antes do contato, estude o cliente.",
+    dict(img="img/p1-preparacao.jpg", n="01", t="Preparação", lead="Antes do contato, estude o cliente.",
          icon="clipboard",
          how=["Conheça a empresa, o mercado e os concorrentes.",
               "Defina o objetivo da visita.",
@@ -20,7 +20,7 @@ STEPS = [
          focus="O que preciso saber para agregar valor antes mesmo de chegar?",
          note="Preparação reduz improviso. Saber tipo de carga, rota, frota atual, "
               "orçamento e urgência muda a conversa inteira."),
-    dict(n="02", t="Conexão e Rapport", lead="As pessoas compram de quem gera confiança.",
+    dict(img="img/p2-rapport.jpg", n="02", t="Conexão e Rapport", lead="As pessoas compram de quem gera confiança.",
          icon="handshake",
          how=["Cumprimente de forma genuína.",
               "Observe o perfil comportamental.",
@@ -29,7 +29,7 @@ STEPS = [
          focus="Criar um ambiente seguro para conversar.",
          note="Rapport não é bajulação. É respeito, atenção, escuta e postura "
               "profissional desde o primeiro contato."),
-    dict(n="03", t="Diagnóstico", lead="Este é o coração da venda consultiva.",
+    dict(img="img/p3-diagnostico.jpg", n="03", t="Diagnóstico", lead="Este é o coração da venda consultiva.",
          icon="search",
          how=["Pergunte antes de apresentar.",
               "Explore situação atual, dificuldades e objetivos.",
@@ -37,7 +37,7 @@ STEPS = [
          focus="Quem pergunta conduz a venda.",
          note="Como fazem hoje? Qual o maior desafio? O que acontece se continuar "
               "assim? Entender vem antes de oferecer."),
-    dict(n="04", t="Escuta Ativa", lead="Escutar é diferente de esperar a vez de falar.",
+    dict(img="img/p4-escuta.jpg", n="04", t="Escuta Ativa", lead="Escutar é diferente de esperar a vez de falar.",
          icon="listen",
          how=["Não interrompa.",
               "Faça anotações.",
@@ -46,7 +46,7 @@ STEPS = [
          focus="“Se entendi corretamente, o maior problema é…”",
          note="Escuta ativa transmite segurança. Repetir o que o cliente disse evita "
               "erro e aumenta a confiança."),
-    dict(n="05", t="Apresentação da Solução", lead="Apresente apenas o que resolve as dores identificadas.",
+    dict(img="img/p5-solucao.jpg", n="05", t="Apresentação da Solução", lead="Apresente apenas o que resolve as dores identificadas.",
          icon="truck",
          how=["Não venda características.",
               "Venda benefícios.",
@@ -54,7 +54,7 @@ STEPS = [
          focus="Produto → Benefício → Resultado",
          note="Não é só motor ou ano. É economia, produtividade, capacidade, menor "
               "risco e adequação à operação do cliente."),
-    dict(n="06", t="Geração de Valor", lead="Mostre que o investimento gera retorno.",
+    dict(img="img/p6-valor.jpg", n="06", t="Geração de Valor", lead="Mostre que o investimento gera retorno.",
          icon="diamond",
          how=["Economia e segurança.",
               "Praticidade e crescimento.",
@@ -62,7 +62,7 @@ STEPS = [
          focus="Venda transformação. Não preço.",
          note="Preço sempre pesa quando o valor não está claro. Quando o cliente "
               "percebe retorno, a negociação fica madura."),
-    dict(n="07", t="Tratamento das Objeções", lead="Objeção significa interesse.",
+    dict(img="img/p7-objecoes.jpg", n="07", t="Tratamento das Objeções", lead="Objeção significa interesse.",
          icon="shield",
          how=["Nunca confronte. Primeiro compreenda.",
               "Ouvir, validar, esclarecer e confirmar.",
@@ -70,7 +70,7 @@ STEPS = [
          focus="“Entendo sua preocupação…”",
          note="Objeção não é rejeição. É dúvida, medo ou falta de informação. Acolha "
               "e esclareça."),
-    dict(n="08", t="Fechamento", lead="Conduza naturalmente para a decisão.",
+    dict(img="img/p8-fechamento.jpg", n="08", t="Fechamento", lead="Conduza naturalmente para a decisão.",
          icon="check",
          how=["“Faz sentido para você?”",
               "“Podemos iniciar?”",
@@ -78,7 +78,7 @@ STEPS = [
          focus="Não pressione. Conduza.",
          note="O fechamento é consequência do diagnóstico, do valor e da confiança. "
               "Pressionar demais quebra o que foi construído."),
-    dict(n="09", t="Pós-venda e Fidelização", lead="A venda termina quando começa o relacionamento.",
+    dict(img="img/p9-posvenda.jpg", n="09", t="Pós-venda e Fidelização", lead="A venda termina quando começa o relacionamento.",
          icon="star",
          how=["Acompanhe e confirme a satisfação.",
               "Ofereça suporte e novos contatos.",
@@ -171,6 +171,8 @@ FOOT = ('<footer class="ft"><span>Vendas de Alta Performance · O Código das Ve
 def slide_cover():
     return f'''
 <section class="slide dark cover">
+  <img class="cv-bg" src="img/capa.jpg" alt="">
+  <div class="cv-veil"></div>
   {vortex()}
   <img class="cv-logo" src="logo-jr.png" alt="Jocelaine Rufatto">
   <div class="cv-txt">
@@ -231,17 +233,22 @@ def slide_step(s, i):
       </div>
     </div>
     <div class="cols">
-      <div class="card">
-        <div class="card-k">Como aplicar na prática</div>
-        <ul>{hows}</ul>
+      <div class="col">
+        <div class="card">
+          <div class="card-k">Como aplicar na prática</div>
+          <ul>{hows}</ul>
+        </div>
+        <div class="note"><span class="note-k">Para estudar e falar</span>
+          <p>{html.escape(s["note"])}</p></div>
       </div>
-      <div class="card gold">
-        <div class="card-k">Ponto de atenção</div>
-        <p class="focus">{html.escape(s["focus"])}</p>
+      <div class="col">
+        <figure class="shot"><img src="{s["img"]}" alt=""></figure>
+        <div class="card gold">
+          <div class="card-k">Ponto de atenção</div>
+          <p class="focus">{html.escape(s["focus"])}</p>
+        </div>
       </div>
     </div>
-    <div class="note"><span class="note-k">Para estudar e falar</span>
-      <p>{html.escape(s["note"])}</p></div>
   </div>
   {FOOT}
 </section>'''
@@ -342,6 +349,9 @@ h1,h2,.medal-n,.mc-n,.q-mark,.nine span{{font-family:'Playfair Display',serif;fo
   border:1px solid rgba(232,194,104,.55);color:var(--gold-lt);font-size:20px;
   letter-spacing:.2em;text-transform:uppercase}}
 .cv-logo{{position:absolute;left:50%;transform:translateX(-50%);top:96px;z-index:6;height:60px}}
+.cv-bg{{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}}
+.cv-veil{{position:absolute;inset:0;z-index:1;background:
+  radial-gradient(120% 90% at 50% 45%,rgba(21,18,16,.72) 0%,rgba(21,18,16,.93) 62%,#151210 100%)}}
 
 /* ---------------- citacao ---------------- */
 .q-txt{{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);z-index:5;
@@ -365,22 +375,29 @@ h1,h2,.medal-n,.mc-n,.q-mark,.nine span{{font-family:'Playfair Display',serif;fo
   border-radius:22px;padding:26px 40px;font-size:23px;text-align:center;letter-spacing:.01em}}
 
 /* ---------------- passo ---------------- */
-.st-head{{display:flex;align-items:center;gap:38px}}
-.medal{{position:relative;width:150px;height:150px;flex:none;border-radius:44px;
+.st-head{{display:flex;align-items:center;gap:34px;flex:0 0 auto}}
+.medal{{position:relative;width:132px;height:132px;flex:none;border-radius:44px;
   background:var(--grad);color:var(--ink);display:flex;align-items:center;
   justify-content:center;box-shadow:0 16px 34px rgba(192,138,42,.32)}}
 .medal-n{{position:absolute;right:-12px;bottom:-14px;width:66px;height:66px;
   border-radius:22px;background:var(--ink);color:var(--gold-lt);font-size:29px;
   display:flex;align-items:center;justify-content:center}}
-.step h1{{font-size:60px;line-height:1.06}}
-.st-lead{{margin-top:12px;font-size:29px;color:var(--ink-soft)}}
+.step h1{{font-size:54px;line-height:1.06}}
+.st-lead{{margin-top:10px;font-size:26px;color:var(--ink-soft)}}
 
 /* passo: cabeca, cartoes que esticam e a faixa escura no rodape */
 .step{{display:flex;flex-direction:column}}
-.cols{{margin-top:46px;display:grid;grid-template-columns:1.18fr 1fr;gap:34px;flex:1}}
-.card{{display:flex;flex-direction:column}}
+.cols{{margin-top:40px;display:grid;grid-template-columns:1.12fr 1fr;gap:32px;flex:1;
+  min-height:0}}
+.col{{display:flex;flex-direction:column;gap:26px;min-height:0}}
+.card{{display:flex;flex-direction:column;flex:1;min-height:0}}
+.shot{{flex:0 0 306px;border-radius:32px;overflow:hidden;position:relative;
+  box-shadow:0 16px 36px rgba(21,18,16,.16)}}
+.shot img{{width:100%;height:100%;object-fit:cover;display:block}}
+.shot::after{{content:"";position:absolute;inset:0;border-radius:32px;
+  box-shadow:inset 0 0 0 1px rgba(192,138,42,.38)}}
 .card{{background:var(--card);border:1px solid var(--line);border-radius:32px;
-  padding:38px 42px;box-shadow:0 12px 30px rgba(21,18,16,.05)}}
+  padding:32px 38px;box-shadow:0 12px 30px rgba(21,18,16,.05)}}
 .card.gold{{background:var(--paper-2);border-color:#DFC894}}
 .card-k{{font-size:17px;letter-spacing:.24em;text-transform:uppercase;
   color:var(--gold-deep);font-weight:500;margin-bottom:24px}}
@@ -391,13 +408,13 @@ h1,h2,.medal-n,.mc-n,.q-mark,.nine span{{font-family:'Playfair Display',serif;fo
 .card ul{{margin:auto 0}}
 .card ul li::before{{content:"";position:absolute;left:0;top:14px;width:11px;height:11px;
   transform:rotate(45deg);background:var(--grad)}}
-.focus{{font-size:31px;line-height:1.42;color:var(--gold-deep);font-weight:500;
+.focus{{font-size:26px;line-height:1.4;color:var(--gold-deep);font-weight:500;
   margin:auto 0}}
 
-.note{{margin-top:34px;background:var(--ink);border-radius:26px;padding:30px 40px}}
+.note{{background:var(--ink);border-radius:26px;padding:26px 36px;flex:0 0 auto}}
 .note-k{{display:block;font-size:16px;letter-spacing:.24em;text-transform:uppercase;
   color:var(--gold-lt);margin-bottom:12px}}
-.note p{{font-size:24px;line-height:1.45;color:#EDE5D8}}
+.note p{{font-size:22px;line-height:1.45;color:#EDE5D8}}
 
 /* ---------------- resumo ---------------- */
 .sum{{display:flex;flex-direction:column}}
