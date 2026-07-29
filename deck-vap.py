@@ -172,15 +172,14 @@ def slide_cover():
     return f'''
 <section class="slide dark cover">
   {vortex()}
+  <img class="cv-logo" src="logo-jr.png" alt="Jocelaine Rufatto">
   <div class="cv-txt">
     <div class="eyebrow">Material de estudo · Equipe comercial</div>
-    <div class="gold-rule"></div>
+    <div class="gold-rule center"></div>
     <h1>Os 9 Passos da<br><em>Venda Consultiva</em></h1>
     <p class="cv-sub">Quanto melhor o diagnóstico, mais natural será o fechamento.</p>
     <div class="cv-badge">80% escutar · 20% falar</div>
   </div>
-  <img class="cv-photo" src="jocelaine-branco.png" alt="Jocelaine Rufatto">
-  <img class="cv-logo" src="logo-jr.png" alt="Jocelaine Rufatto">
 </section>'''
 
 
@@ -188,12 +187,12 @@ def slide_quote():
     return f'''
 <section class="slide dark quote">
   {vortex(0.9)}
-  <figure class="q-photo"><img src="cena-consultiva.png" alt=""></figure>
   <div class="q-txt">
     <div class="q-mark">“</div>
     <h1>A venda consultiva não é <em>empurrar produto</em>.</h1>
     <p>É entender a necessidade, gerar confiança e conduzir o cliente
        para uma decisão segura.</p>
+    <div class="gold-rule center"></div>
   </div>
 </section>'''
 
@@ -330,30 +329,28 @@ h1,h2,.medal-n,.mc-n,.q-mark,.nine span{{font-family:'Playfair Display',serif;fo
 .gold-rule.center{{margin:0 auto}}
 
 /* ---------------- capa ---------------- */
-.cover .cv-txt{{position:absolute;left:var(--pad);top:264px;z-index:5;width:1000px}}
-.eyebrow{{font-size:19px;letter-spacing:.34em;text-transform:uppercase;color:var(--gold-lt);
-  margin-bottom:26px}}
-.cover h1{{margin-top:34px;font-size:104px;line-height:1.03;color:#fff}}
+.cover .cv-txt{{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);
+  z-index:5;padding:0 260px;text-align:center;display:flex;flex-direction:column;
+  align-items:center}}
+.eyebrow{{font-size:20px;letter-spacing:.36em;text-transform:uppercase;color:var(--gold-lt);
+  margin-bottom:28px}}
+.cover h1{{margin-top:40px;font-size:112px;line-height:1.02;color:#fff}}
 .cover h1 em{{font-style:italic;background:var(--grad);-webkit-background-clip:text;
   background-clip:text;color:transparent}}
-.cv-sub{{margin-top:30px;font-size:29px;line-height:1.45;color:#D9D2C7;max-width:820px}}
+.cv-sub{{margin-top:34px;font-size:30px;line-height:1.45;color:#D9D2C7;max-width:860px}}
 .cv-badge{{margin-top:40px;display:inline-block;padding:16px 34px;border-radius:999px;
   border:1px solid rgba(232,194,104,.55);color:var(--gold-lt);font-size:20px;
   letter-spacing:.2em;text-transform:uppercase}}
-.cv-photo{{position:absolute;right:96px;bottom:0;height:1005px;z-index:4;
-  filter:drop-shadow(-30px 20px 60px rgba(0,0,0,.55))}}
-.cv-logo{{position:absolute;left:var(--pad);top:84px;z-index:6;height:62px}}
+.cv-logo{{position:absolute;left:50%;transform:translateX(-50%);top:96px;z-index:6;height:60px}}
 
 /* ---------------- citacao ---------------- */
-.q-photo{{position:absolute;right:var(--pad);top:120px;width:620px;height:840px;z-index:4;
-  border-radius:46px;overflow:hidden;border:1px solid rgba(232,194,104,.4);
-  box-shadow:0 30px 70px rgba(0,0,0,.5)}}
-.q-photo img{{width:100%;height:100%;object-fit:cover;object-position:50% 22%}}
-.q-txt{{position:absolute;left:var(--pad);top:250px;width:980px;z-index:5}}
+.q-txt{{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);z-index:5;
+  padding:0 300px;text-align:center;display:flex;flex-direction:column;align-items:center}}
 .q-mark{{font-size:150px;line-height:.6;color:var(--gold);opacity:.85}}
-.quote h1{{margin-top:34px;font-size:64px;line-height:1.16;color:#fff}}
+.quote h1{{margin-top:22px;font-size:76px;line-height:1.14;color:#fff}}
 .quote h1 em{{font-style:italic;color:var(--gold-lt)}}
-.quote p{{margin-top:32px;font-size:29px;line-height:1.5;color:#CDC5B8;max-width:880px}}
+.quote p{{margin-top:36px;margin-bottom:44px;font-size:31px;line-height:1.5;
+  color:#CDC5B8;max-width:1000px}}
 
 /* ---------------- mapa ---------------- */
 .map{{display:flex;flex-direction:column}}
