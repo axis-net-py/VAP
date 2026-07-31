@@ -1,0 +1,5 @@
+# Um nome por linha. Linhas com # sao ignoradas.
+# Substitua pelos participantes reais do treinamento.
+Maria Fernanda Oliveira
+João Carlos Schneider
+Ana Paula Benítez Rodríguez
