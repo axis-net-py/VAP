@@ -26,6 +26,7 @@ MOLDE = "certificado-1pagina.html"
 W, H = 1123, 794          # A4 paisagem @96dpi
 ESCALA = 3                # 288 dpi no PDF final
 GAP = 24                  # respiro entre paginas na renderizacao em lote
+POR_LOTE = 6              # paginas por captura (o Chrome nao passa de ~16k px)
 
 CSS_NOME = """
   /* nome do participante escrito sobre a linha */
@@ -123,35 +124,30 @@ def renderizar(caminho_html, n):
     return saida
 
 
-def exportar(png_lote, nomes, pasta):
+def exportar_lote(png_lote, nomes, pasta, offset, juntos):
     Image.MAX_IMAGE_PIXELS = None
-    os.makedirs(pasta, exist_ok=True)
     folha = Image.open(png_lote)
     pw, ph, pgap = W * ESCALA, H * ESCALA, GAP * ESCALA
     pt_w, pt_h = 841.89, 595.28
 
-    juntos = fitz.open()
     gerados = []
     for i, nome in enumerate(nomes):
         y = i * (ph + pgap)
-        recorte = folha.crop((0, y, pw, y + ph))
-        tmp = os.path.join(pasta, f"_{i}.png")
-        recorte.save(tmp)
+        tmp = os.path.join(pasta, f"_{offset+i}.png")
+        folha.crop((0, y, pw, y + ph)).save(tmp)
 
         doc = fitz.open()
         doc.new_page(width=pt_w, height=pt_h).insert_image(
             fitz.Rect(0, 0, pt_w, pt_h), filename=tmp)
-        destino = os.path.join(pasta, f"{i+1:02d}-{slug(nome)}.pdf")
+        destino = os.path.join(pasta, f"{offset+i+1:03d}-{slug(nome)}.pdf")
         doc.save(destino, deflate=True)
         gerados.append(destino)
 
         juntos.new_page(width=pt_w, height=pt_h).insert_image(
             fitz.Rect(0, 0, pt_w, pt_h), filename=tmp)
         os.remove(tmp)
-
-    todos = os.path.join(pasta, "TODOS-os-certificados.pdf")
-    juntos.save(todos, deflate=True)
-    return gerados, todos
+    folha.close()
+    return gerados
 
 
 def main():
@@ -163,21 +159,26 @@ def main():
     nomes = ler_nomes(args.lista)
     if not nomes:
         sys.exit("Nenhum nome encontrado na lista.")
-    print(f"{len(nomes)} participantes")
+    os.makedirs(args.saida, exist_ok=True)
+    lotes = [nomes[i:i + POR_LOTE] for i in range(0, len(nomes), POR_LOTE)]
+    print(f"{len(nomes)} participantes em {len(lotes)} lotes de ate {POR_LOTE}")
 
-    caminho = montar_html(nomes)
-    png = renderizar(caminho, len(nomes))
-    gerados, todos = exportar(png, nomes, args.saida)
+    juntos = fitz.open()
+    gerados = []
+    for n, lote in enumerate(lotes, 1):
+        caminho = montar_html(lote)
+        png = renderizar(caminho, len(lote))
+        gerados += exportar_lote(png, lote, args.saida, len(gerados), juntos)
+        for f in (caminho, png):
+            if os.path.exists(f):
+                os.remove(f)
+        print(f"  lote {n}/{len(lotes)} - {len(gerados)} prontos")
 
-    for f in (caminho, png):
-        if os.path.exists(f):
-            os.remove(f)
+    todos = os.path.join(args.saida, "TODOS-os-certificados.pdf")
+    juntos.save(todos, deflate=True)
 
     print(f"\n{len(gerados)} certificados em {args.saida}/")
-    for g in gerados[:5]:
-        print("  ", os.path.basename(g))
-    if len(gerados) > 5:
-        print(f"   ... e mais {len(gerados)-5}")
+    print("  ", os.path.basename(gerados[0]), "...", os.path.basename(gerados[-1]))
     print("  ", os.path.basename(todos), "(todos juntos, para imprimir de uma vez)")
 
 

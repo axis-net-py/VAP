@@ -1,5 +1,99 @@
-# Um nome por linha. Linhas com # sao ignoradas.
-# Substitua pelos participantes reais do treinamento.
-Maria Fernanda Oliveira
-João Carlos Schneider
-Ana Paula Benítez Rodríguez
+Adriano Braniak
+Adriano Roberti
+Alexander Custodio
+Alvaro Javier Alvarenga Cáceres
+Anderson Da Silva De Oliveira
+Benito Jose Maria Q Cabral Toledo
+Bruno Lopez
+Camila Petry
+Carlos Antonio Bauer Lopez
+Cledina Rodrigues Klein
+Cleiton Damian Fleyta Venâncio
+Cleiton Enrique Schneider Steinke
+Cleverson Gomez Dos Santos
+Cleyton Lazarini Nunes
+Cristian Eduardo Schneider Steinke
+Cristiano Tavares
+Dailson Dos Santos
+Daniele Cardozo De Monteiro
+Denis Javier Mendoza Duarte
+Denise Dos Santos Duarte
+Elenice Antunes
+Elivandro Tomasini
+Eloizi Milioli
+Emely Prestupa De Souza
+Emerson Luan Santos
+Eschaliche Lujani S. Dos Passos
+Fabiana Tomás López
+Fabio Teles Fernandes
+Flavio Biz
+Francieli Franciscatto
+Francieli Milioli
+Gabriel Gustavo Britos Anzoa
+Geisiely Jazmin Fetsch Victor
+Giovana Fritzen Azevedo
+Guilherme Henrique De Brito Becken Kamp
+Gustavo Ramon Roa Prieto
+Halyson Rosolem
+Igor Dorr
+Isabel Rocio Cáceres Flecha
+Izaqui Roque Ferreira
+Jackson Spinelli
+Jaime Aloisio Beuren
+Jefferson Greyk Da Silva
+Jeisy Luana Souza
+Jennifer Victoria Barrios Matogg
+Jeremias Miguel Insaurralde Pereira
+Jesimara Tequio
+Joaquin Cuttier
+Jonhi Rodrigo Ríos Quiñonez
+Josiana Diedrich De Lima
+José Augusto García Rabuske
+João Felix
+Juan Carlos Ovelar Arguello
+Juliana Batista
+Kauane Hermes Beuren
+Larissa Milena Da Silva Marques
+Lorenzo Antonio Rotela Acosta
+Luan Roll
+Luana Rintzel
+Luana Roll
+Lucas Roll
+Luciano Zago
+Luis Gabriel Chamorro Santín
+Maico Daniel Schulz Henschel
+Maicon Rodrigo Campanharo
+Marcia Hermes
+Marcio Telez
+Marcos Rocha Alves
+Maria Eduarda Amorim
+Maria Isabel Kozar Tavares
+Marines Aparecida De Oliveira
+Martin Egon Fetsch
+María Eulalia Cuevas De Guillen
+Mauricio Dieckmann
+Mirian Fernandes
+Mirian Rossana Medina Duarte
+Modesta Noemí B. Fernández
+Mônica Martineli
+Nachtieli Alves Rutzcu
+Nedimar Maia De Bastos
+Nimia Graciela Acosta Barreiro
+Noelia Samudio
+Patricia Castelli
+Pedro Miguel Boresqui
+Pedro Turcato Sobrinho Neto
+Priscila Horn
+Reinaldo Azevedo Moreira
+Rodrigo Cecluski
+Rodrigo Ferreira Lima
+Rony Amaral
+Sara De Oliveira Andrade
+Tatiani Da Silva Azevedo
+Tiago Schindler
+Vanessa Rodrigues
+Vilmar Petry
+Vitoria Meurer
+Wender Robles
+Wesley Coelho Rodriguez
+Wilson Prado
